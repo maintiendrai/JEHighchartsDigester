@@ -13,9 +13,11 @@
 		84901BB21BFB174200B4AD6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84901BB01BFB174200B4AD6A /* Main.storyboard */; };
 		84901BB41BFB174200B4AD6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84901BB31BFB174200B4AD6A /* Assets.xcassets */; };
 		84901BB71BFB174200B4AD6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84901BB51BFB174200B4AD6A /* LaunchScreen.storyboard */; };
-		84901BC41BFB1CCD00B4AD6A /* exporting.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BC11BFB1CCD00B4AD6A /* exporting.js */; settings = {ASSET_TAGS = (); }; };
-		84901BC51BFB1CCD00B4AD6A /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BC21BFB1CCD00B4AD6A /* highcharts.js */; settings = {ASSET_TAGS = (); }; };
-		84901BC61BFB1CCD00B4AD6A /* jquery-1.9.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BC31BFB1CCD00B4AD6A /* jquery-1.9.0.js */; settings = {ASSET_TAGS = (); }; };
+		84901BCF1BFB276800B4AD6A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 84901BCE1BFB276800B4AD6A /* data.json */; settings = {ASSET_TAGS = (); }; };
+		84901BDE1BFB2A2400B4AD6A /* exporting.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BD91BFB2A2400B4AD6A /* exporting.js */; settings = {ASSET_TAGS = (); }; };
+		84901BDF1BFB2A2400B4AD6A /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BDA1BFB2A2400B4AD6A /* highcharts.js */; settings = {ASSET_TAGS = (); }; };
+		84901BE01BFB2A2400B4AD6A /* baseline.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BDC1BFB2A2400B4AD6A /* baseline.js */; settings = {ASSET_TAGS = (); }; };
+		84901BE11BFB2A2400B4AD6A /* jquery-1.9.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BDD1BFB2A2400B4AD6A /* jquery-1.9.0.js */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +31,11 @@
 		84901BB31BFB174200B4AD6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84901BB61BFB174200B4AD6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84901BB81BFB174200B4AD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84901BC11BFB1CCD00B4AD6A /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
-		84901BC21BFB1CCD00B4AD6A /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
-		84901BC31BFB1CCD00B4AD6A /* jquery-1.9.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.9.0.js"; sourceTree = "<group>"; };
+		84901BCE1BFB276800B4AD6A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		84901BD91BFB2A2400B4AD6A /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
+		84901BDA1BFB2A2400B4AD6A /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
+		84901BDC1BFB2A2400B4AD6A /* baseline.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = baseline.js; sourceTree = "<group>"; };
+		84901BDD1BFB2A2400B4AD6A /* jquery-1.9.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.9.0.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 		84901B9B1BFB174200B4AD6A = {
 			isa = PBXGroup;
 			children = (
-				84901BBE1BFB1CCD00B4AD6A /* JEHighchartsDigester */,
 				84901BA61BFB174200B4AD6A /* JEHighchartsDigesterDemo */,
 				84901BA51BFB174200B4AD6A /* Products */,
 			);
@@ -65,10 +68,12 @@
 		84901BA61BFB174200B4AD6A /* JEHighchartsDigesterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84901BD61BFB2A2400B4AD6A /* JEHighchartsDigester */,
 				84901BAA1BFB174200B4AD6A /* AppDelegate.h */,
 				84901BAB1BFB174200B4AD6A /* AppDelegate.m */,
 				84901BAD1BFB174200B4AD6A /* ViewController.h */,
 				84901BAE1BFB174200B4AD6A /* ViewController.m */,
+				84901BCD1BFB276800B4AD6A /* Resources */,
 				84901BB01BFB174200B4AD6A /* Main.storyboard */,
 				84901BB31BFB174200B4AD6A /* Assets.xcassets */,
 				84901BB51BFB174200B4AD6A /* LaunchScreen.storyboard */,
@@ -86,30 +91,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84901BBE1BFB1CCD00B4AD6A /* JEHighchartsDigester */ = {
+		84901BCD1BFB276800B4AD6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				84901BBF1BFB1CCD00B4AD6A /* js */,
+				84901BCE1BFB276800B4AD6A /* data.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84901BD61BFB2A2400B4AD6A /* JEHighchartsDigester */ = {
+			isa = PBXGroup;
+			children = (
+				84901BD71BFB2A2400B4AD6A /* js */,
 			);
 			path = JEHighchartsDigester;
 			sourceTree = "<group>";
 		};
-		84901BBF1BFB1CCD00B4AD6A /* js */ = {
+		84901BD71BFB2A2400B4AD6A /* js */ = {
 			isa = PBXGroup;
 			children = (
-				84901BC01BFB1CCD00B4AD6A /* highcharts */,
-				84901BC31BFB1CCD00B4AD6A /* jquery-1.9.0.js */,
+				84901BD81BFB2A2400B4AD6A /* highcharts */,
+				84901BDD1BFB2A2400B4AD6A /* jquery-1.9.0.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
 		};
-		84901BC01BFB1CCD00B4AD6A /* highcharts */ = {
+		84901BD81BFB2A2400B4AD6A /* highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				84901BC11BFB1CCD00B4AD6A /* exporting.js */,
-				84901BC21BFB1CCD00B4AD6A /* highcharts.js */,
+				84901BD91BFB2A2400B4AD6A /* exporting.js */,
+				84901BDA1BFB2A2400B4AD6A /* highcharts.js */,
+				84901BDB1BFB2A2400B4AD6A /* viewOption */,
 			);
 			path = highcharts;
+			sourceTree = "<group>";
+		};
+		84901BDB1BFB2A2400B4AD6A /* viewOption */ = {
+			isa = PBXGroup;
+			children = (
+				84901BDC1BFB2A2400B4AD6A /* baseline.js */,
+			);
+			path = viewOption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84901BB71BFB174200B4AD6A /* LaunchScreen.storyboard in Resources */,
+				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
+				84901BDE1BFB2A2400B4AD6A /* exporting.js in Resources */,
 				84901BB41BFB174200B4AD6A /* Assets.xcassets in Resources */,
 				84901BB21BFB174200B4AD6A /* Main.storyboard in Resources */,
-				84901BC51BFB1CCD00B4AD6A /* highcharts.js in Resources */,
-				84901BC41BFB1CCD00B4AD6A /* exporting.js in Resources */,
-				84901BC61BFB1CCD00B4AD6A /* jquery-1.9.0.js in Resources */,
+				84901BE11BFB2A2400B4AD6A /* jquery-1.9.0.js in Resources */,
+				84901BDF1BFB2A2400B4AD6A /* highcharts.js in Resources */,
+				84901BE01BFB2A2400B4AD6A /* baseline.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
