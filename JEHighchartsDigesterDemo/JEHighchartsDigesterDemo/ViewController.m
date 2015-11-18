@@ -30,12 +30,12 @@
     self.webView.delegate = self;
     
     NSString* format = EMPTY_WEB_VIEW;
-    NSString* html = [NSString stringWithFormat: format,
+    NSString* html = [NSString stringWithFormat:format,
                       self.view.bounds.size.width,
                       CGRectGetHeight(self.webView.frame),
                       CGRectGetHeight(self.webView.frame)/2.f];
     
-    [self.webView loadHTMLString:html baseURL: nil];
+    [self.webView loadHTMLString:html baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning {
