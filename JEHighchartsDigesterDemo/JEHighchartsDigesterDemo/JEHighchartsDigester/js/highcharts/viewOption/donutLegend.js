@@ -4,6 +4,12 @@ $(function () {
                     
                     // Build the chart
                     $('#container').highcharts({
+                                               yAxis: {
+                                               title: {
+                                               text: ''
+                                               },
+                                               min: 0
+                                               },
                                                chart: {
                                                plotBackgroundColor: null,
                                                plotBorderWidth: null,
@@ -15,7 +21,7 @@ $(function () {
                                                }
                                                },
                                                title: {
-                                               text: 'Browser market shares January, 2015 to May, 2015'
+                                               text: ''
                                                },
                                                tooltip: {
                                                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -24,17 +30,28 @@ $(function () {
                                                pie: {
                                                allowPointSelect: true,
                                                cursor: 'pointer',
-                                               innerSize: 90,
                                                dataLabels: {
                                                enabled: false
-                                               }
-                                               ,
+                                               },
                                                showInLegend: true
+                                               },
+                                               spline: {
+                                               marker: {
+                                               enabled: true
+                                               }
                                                }
                                                },
-                                               series: [{
+                                               series: [
+                                                        {
+                                                        type: 'spline',
+                                                        name: 'Jane',
+                                                        data: [3, 2, 1, 3, 4]
+                                                        },{
                                                         name: 'Brands',
                                                         colorByPoint: true,
+                                                        center: [130, 80],
+                                                        size: 180,
+                                                        innerSize: 90,
                                                         data: [{
                                                                name: 'Microsoft Internet Explorer',
                                                                y: 56.33
