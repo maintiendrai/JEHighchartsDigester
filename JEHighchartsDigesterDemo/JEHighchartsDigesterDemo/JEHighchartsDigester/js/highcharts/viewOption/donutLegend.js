@@ -60,10 +60,11 @@ $(function () {
                                                            }
                                                    },
                                                
-                                                   spline: {
+                                                   area: {
                                                        width: 10,
                                                        height: 10,
-                                                       depth: 10
+                                                       depth: 10,
+                                                       showInLegend: false
                                                    }
                                                
                                                },
