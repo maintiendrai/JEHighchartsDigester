@@ -5,8 +5,8 @@ $(function () {
                     // Build the chart
                     $('#container').highcharts({
                                                chart: {
-                                               height: 480,
-                                               width: 320
+//                                               height: 480,
+//                                               width: 320
                                                },
                                                yAxis: [
                                                        
@@ -40,24 +40,34 @@ $(function () {
                                                text: ''
                                                },
                                                tooltip: {
-                                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
                                                },
                                                plotOptions: {
-                                               pie: {
-                                               allowPointSelect: true,
-                                               cursor: 'pointer',
-                                               dataLabels: {
-                                               enabled: false
+                                                   pie: {
+                                                   allowPointSelect: true,
+                                                   cursor: 'pointer',
+                                                   dataLabels: {
+                                                   enabled: false
+                                                   },
+                                                   showInLegend: true
                                                },
-                                               showInLegend: true
-                                               },
-                                               spline: {
-                                               width: 10,
-                                               height: 10,
-                                               depth: 10
-                                               }
+                                               
+                                                   spline: {
+                                                       width: 10,
+                                                       height: 10,
+                                                       depth: 10
+                                                   }
                                                
                                                },
+                                               
+                                               legend: {
+                                                   floating: true,
+                                                   align: 'left',
+                                                   x: 10, // = marginLeft - default spacingLeft
+                                                   itemWidth: 160,
+                                                   verticalAlign: 'bottom',
+                                               },
+                                               
                                                series: [{
                                                         type: 'spline',
                                                         name: 'Jane',
