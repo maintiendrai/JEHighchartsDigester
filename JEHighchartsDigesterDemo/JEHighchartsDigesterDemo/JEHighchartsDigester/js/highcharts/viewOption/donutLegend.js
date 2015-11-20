@@ -36,21 +36,21 @@ $(function () {
                                                        //   opposite: true
                                                        }],
                                                
-                                               title: {
-                                               text: ''
-                                               },
-                                               tooltip: {
-                                                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                                               },
-                                               plotOptions: {
-                                                   pie: {
-                                                   allowPointSelect: true,
-                                                   cursor: 'pointer',
-                                                   dataLabels: {
-                                                   enabled: false
+                                                   title: {
+                                                       text: ''
                                                    },
-                                                   showInLegend: true
-                                               },
+                                                   tooltip: {
+                                                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                   },
+                                                   plotOptions: {
+                                                       pie: {
+                                                       allowPointSelect: true,
+                                                       cursor: 'pointer',
+                                                       dataLabels: {
+                                                       enabled: false
+                                                       },
+                                                       showInLegend: true
+                                                   },
                                                
                                                    spline: {
                                                        width: 10,
@@ -69,9 +69,10 @@ $(function () {
                                                },
                                                
                                                series: [{
-                                                        type: 'spline',
+                                                        type: 'area',
                                                         name: 'Jane',
                                                         top: 400,
+                                                        lineColor: '#666666',
                                                         // cropThreshold: 100,
                                                         yAxis: 1,
                                                         data: [3, 2, 1, 3, 4]
