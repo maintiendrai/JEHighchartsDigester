@@ -4,33 +4,36 @@ $(function () {
                     
                     // Build the chart
                     $('#container').highcharts({
-//                                               chart: {
-//                                               height: 800
-//                                               },
+                                               chart: {
+                                               height: 480,
+                                               width: 320
+                                               },
                                                yAxis: [
                                                        
-                                                    { // Primary yAxis
+                                                       { // Primary yAxis
                                                        title: {
                                                        text: ''
                                                        },
                                                        min: 0
                                                        }, { // Secondary yAxis
-                                                       top: 200,
-                                                       min: 0,
-                                                       height: 300,
-                                                       max: 100,
+                                                       top: 220,
+                                                       // min: 0,
+                                                       height: 140,
+                                                       bottom: 100,
+                                                       // max: 100,
                                                        title: {
-                                                       text: '%',
+                                                       text: '',
                                                        style: {
                                                        color: '#4572A7'
                                                        }
-                                                       },
-                                                       labels: {
-                                                       style: {
-                                                       color: '#4572A7'
                                                        }
-                                                       },
-                                                       opposite: true
+                                                       //   ,
+                                                       //   labels: {
+                                                       //       style: {
+                                                       //           color: '#4572A7'
+                                                       //       }
+                                                       //   },
+                                                       //   opposite: true
                                                        }],
                                                
                                                title: {
@@ -55,23 +58,22 @@ $(function () {
                                                }
                                                
                                                },
-                                               series: [
-                                                        {
+                                               series: [{
                                                         type: 'spline',
                                                         name: 'Jane',
                                                         top: 400,
-                                                        cropThreshold: 100,
+                                                        // cropThreshold: 100,
                                                         yAxis: 1,
                                                         data: [3, 2, 1, 3, 4]
-                                                        },{
-                                                        type:'pie',
+                                                        }, {
+                                                        type: 'pie',
                                                         options3d: {
                                                         enabled: false,
                                                         alpha: 45
                                                         },
                                                         name: 'Brands',
                                                         colorByPoint: true,
-                                                        center: [220, 80],
+                                                        center: [120, 80],
                                                         size: 180,
                                                         innerSize: 90,
                                                         data: [{
