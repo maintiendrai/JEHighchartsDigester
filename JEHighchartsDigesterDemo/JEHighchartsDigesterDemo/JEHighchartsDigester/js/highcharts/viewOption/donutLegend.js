@@ -7,6 +7,7 @@ $(function () {
                                                chart: {
 //                                               height: 480,
 //                                               width: 320
+                                               
                                                },
                                                yAxis: [
                                                        
@@ -49,7 +50,14 @@ $(function () {
                                                        dataLabels: {
                                                        enabled: false
                                                        },
-                                                       showInLegend: true
+                                                       showInLegend: true,
+                                                           point:{
+                                                           events : {
+                                                           legendItemClick: function(e){
+                                                           e.preventDefault();
+                                                           }
+                                                           }
+                                                           }
                                                    },
                                                
                                                    spline: {
@@ -72,16 +80,22 @@ $(function () {
                                                         type: 'area',
                                                         name: 'Jane',
                                                         top: 400,
-                                                        lineColor: '#666666',
+//                                                        lineColor: '#666666',
                                                         // cropThreshold: 100,
                                                         yAxis: 1,
                                                         data: [3, 2, 1, 3, 4]
-                                                        }, {
+                                                        },
+                                                        
+                                                        
+                                                        {
                                                         type: 'pie',
                                                         options3d: {
                                                         enabled: false,
                                                         alpha: 45
                                                         },
+                                                     //   align: 'center',
+                                                        y:-100,
+                                                        verticalAlign: 'top',
                                                         name: 'Brands',
                                                         colorByPoint: true,
                                                         center: [120, 80],
