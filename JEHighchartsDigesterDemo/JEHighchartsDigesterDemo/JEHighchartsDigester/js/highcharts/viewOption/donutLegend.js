@@ -4,22 +4,35 @@ $(function () {
                     
                     // Build the chart
                     $('#container').highcharts({
-                                               yAxis: {
-                                               title: {
-                                               text: ''
-                                               },
-                                               min: 0
-                                               },
-                                               chart: {
-                                               plotBackgroundColor: null,
-                                               plotBorderWidth: null,
-                                               plotShadow: false,
-                                               type: 'pie',
-                                               options3d: {
-                                               enabled: false,
-                                               alpha: 45
-                                               }
-                                               },
+//                                               chart: {
+//                                               height: 800
+//                                               },
+                                               yAxis: [
+                                                       
+                                                    { // Primary yAxis
+                                                       title: {
+                                                       text: ''
+                                                       },
+                                                       min: 0
+                                                       }, { // Secondary yAxis
+                                                       top: 200,
+                                                       min: 0,
+                                                       height: 300,
+                                                       max: 100,
+                                                       title: {
+                                                       text: '%',
+                                                       style: {
+                                                       color: '#4572A7'
+                                                       }
+                                                       },
+                                                       labels: {
+                                                       style: {
+                                                       color: '#4572A7'
+                                                       }
+                                                       },
+                                                       opposite: true
+                                                       }],
+                                               
                                                title: {
                                                text: ''
                                                },
@@ -36,20 +49,29 @@ $(function () {
                                                showInLegend: true
                                                },
                                                spline: {
-                                               marker: {
-                                               enabled: true
+                                               width: 10,
+                                               height: 10,
+                                               depth: 10
                                                }
-                                               }
+                                               
                                                },
                                                series: [
                                                         {
                                                         type: 'spline',
                                                         name: 'Jane',
+                                                        top: 400,
+                                                        cropThreshold: 100,
+                                                        yAxis: 1,
                                                         data: [3, 2, 1, 3, 4]
                                                         },{
+                                                        type:'pie',
+                                                        options3d: {
+                                                        enabled: false,
+                                                        alpha: 45
+                                                        },
                                                         name: 'Brands',
                                                         colorByPoint: true,
-                                                        center: [130, 80],
+                                                        center: [220, 80],
                                                         size: 180,
                                                         innerSize: 90,
                                                         data: [{
