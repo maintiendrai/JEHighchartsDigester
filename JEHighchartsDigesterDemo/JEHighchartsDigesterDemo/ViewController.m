@@ -35,6 +35,8 @@
     
     [self htmlDigester];
     
+    
+//    [self jsDigester];
 }
 
 
@@ -73,7 +75,6 @@
 
 - (void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    NSLog(@"viewWillLayoutSubviews");
 }
 
 
@@ -95,6 +96,9 @@
 //load viewOption
 - (void)loadViewOption {
     
+    //load baseline
+//    [self loadBaseline];
+    
     //load donutLegend
     [self loadDonutLegend];
 
@@ -106,10 +110,16 @@
     NSString* baselinePath = [[NSBundle mainBundle] pathForResource:@"baseline" ofType:@"js"];
     NSString* baselineInit = [NSString stringWithContentsOfFile:baselinePath encoding:NSUTF8StringEncoding error:nil];
     
+    
+    NSString* xaxisPath = [[NSBundle mainBundle] pathForResource: @"xaxis" ofType: @"json"];
+    NSString* xaxis = [NSString stringWithContentsOfFile:xaxisPath encoding: NSUTF8StringEncoding error:nil];
+    
+    
     NSString* dataPath = [[NSBundle mainBundle] pathForResource: @"data" ofType: @"json"];
-    NSString* json = [NSString stringWithContentsOfFile: dataPath encoding: NSUTF8StringEncoding error:nil];
+    NSString* json = [NSString stringWithContentsOfFile:dataPath encoding: NSUTF8StringEncoding error:nil];
+    
     NSString* theme = @"";
-    NSString* baseline = [theme stringByAppendingFormat:baselineInit, json];
+    NSString* baseline = [theme stringByAppendingFormat:baselineInit, xaxis, json];
     
     [self.webView stringByEvaluatingJavaScriptFromString:baseline];
 }
@@ -118,7 +128,7 @@
 - (void)loadDonutLegend {
     NSString* donutPath = [[NSBundle mainBundle] pathForResource:@"donutLegend" ofType:@"js"];
     NSString* donutInit = [NSString stringWithContentsOfFile:donutPath encoding:NSUTF8StringEncoding error:nil];
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource: @"data" ofType: @"json"];
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource: @"donutLegendData" ofType: @"json"];
     NSString* json = [NSString stringWithContentsOfFile: dataPath encoding: NSUTF8StringEncoding error:nil];
     NSString* theme = @"";
     NSString* baseline = [theme stringByAppendingFormat:donutInit, json];
@@ -145,7 +155,7 @@
     [self loadDatas];
     
     //method 2
-    [self loadJSLibFiles];
+//    [self loadJSFiles];
 
 }
 

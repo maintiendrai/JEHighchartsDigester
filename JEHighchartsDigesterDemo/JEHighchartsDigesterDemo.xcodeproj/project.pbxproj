@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84898FBF1C06B22E00487F92 /* donutLegendData.json in Resources */ = {isa = PBXBuildFile; fileRef = 84898FBE1C06B22D00487F92 /* donutLegendData.json */; settings = {ASSET_TAGS = (); }; };
 		84901BA91BFB174200B4AD6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BA81BFB174200B4AD6A /* main.m */; };
 		84901BAC1BFB174200B4AD6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAB1BFB174200B4AD6A /* AppDelegate.m */; };
 		84901BAF1BFB174200B4AD6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAE1BFB174200B4AD6A /* ViewController.m */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84898FBE1C06B22D00487F92 /* donutLegendData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = donutLegendData.json; sourceTree = "<group>"; };
 		84901BA41BFB174200B4AD6A /* JEHighchartsDigesterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEHighchartsDigesterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84901BA81BFB174200B4AD6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84901BAA1BFB174200B4AD6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				84901BCE1BFB276800B4AD6A /* data.json */,
 				84901BE21BFC1BB800B4AD6A /* xaxis.json */,
+				84898FBE1C06B22D00487F92 /* donutLegendData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84901BB71BFB174200B4AD6A /* LaunchScreen.storyboard in Resources */,
+				84898FBF1C06B22E00487F92 /* donutLegendData.json in Resources */,
 				84901BE51BFC26EA00B4AD6A /* donut.js in Resources */,
 				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
 				84901BDE1BFB2A2400B4AD6A /* exporting.js in Resources */,
