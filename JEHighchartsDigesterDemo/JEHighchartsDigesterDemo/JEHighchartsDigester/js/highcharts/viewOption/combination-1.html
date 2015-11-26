@@ -22,16 +22,14 @@
 
 
         $(function () {
+          
+          
         $('#container').highcharts({
         xAxis: [{ // Primary xAxis
                    title: {
                    text: '整数',
-                   //  align: 'center',
-                   // center: [120, 80],
-                   x: 160,
-                   y: 90,
-                   
-                   //  verticalAlign: 'middle'
+                x:$("#container").width()/2-50,
+                y:$("#container").height()/3-30,
                    },
                    width: 0,
                    height:0,
@@ -39,19 +37,20 @@
                    },
                    {
                    categories:[],
-                   height:390   //写死了
                    }],
             yAxis: [
 
             { // Primary yAxis
+                    top: 50,
+                    height: $("#container").height()/2,
                 title: {
                     text: ''
                 },
                 min: 0
             }, { // Secondary yAxis
-                top: 280,
+                top: $("#container").height()/2+50,
                 // min: 0,
-                height: 140,   //写死了
+                height: $("#container").height()/2-85,
 //                bottom: 100,
                 // max: 100,
                 title: {
@@ -111,28 +110,6 @@
 
             },
 
-            legend: {
-                floating: true,
-                align: 'left',
-                x: 10, // = marginLeft - default spacingLeft
-//                padding: 20,
-                itemWidth: 160,
-               symbolHeight: 16,
-               symbolWidth: 16,
-               symbolRadius: 8,
-                verticalAlign: 'bottom',
-                                   
-                itemMarginBottom: 16,
-                                   itemStyle: {
-                                   lineHeight: '100px'
-                                   },
-                                   itemStyle: {
-                                   font: '12pt Trebuchet MS, Verdana, sans-serif',
-                                   color: '#A0A0A0'
-                                   }
-                
-            },
-
             series: [{
                 type: 'column',
                 name: 'Jane',
@@ -146,17 +123,17 @@
 
 
             {
+                xAxis: 0,
+                yAxis: 0,
                 type: 'pie',
                 options3d: {
                     enabled: false,
                     alpha: 45
                 },
-                //   align: 'center',
-//                y: -100,
-                verticalAlign: 'top',
+                align: 'top',
                 name: 'Brands',
                 colorByPoint: true,
-                center: [140, 80], //写死了
+                center:["50%", "35%"],
                 size: 200,
                 innerSize: 90,
                 data: [{
@@ -177,7 +154,7 @@
 <body>
 <script src="highcharts.js"></script>
 
-<div id="container" style="min-width: 310px; height: 450px; margin: 0 auto"></div>
+<div id="container" style="min-width: 100%; height: 667px; margin: 0 auto"></div>
 
 </body>
 </html>

@@ -149,7 +149,7 @@
 
 //use when method1
 - (void)loadDatas {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([0,1,2,3,4,5,6,7,8,9])"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56])"];
 }
 
 
