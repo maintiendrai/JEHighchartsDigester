@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		84898FBF1C06B22E00487F92 /* combination-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84898FBE1C06B22D00487F92 /* combination-1.json */; settings = {ASSET_TAGS = (); }; };
 		84898FC11C06B66800487F92 /* combination-1.js in Resources */ = {isa = PBXBuildFile; fileRef = 84898FC01C06B66800487F92 /* combination-1.js */; settings = {ASSET_TAGS = (); }; };
+		84898FC31C06B7D200487F92 /* combination-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 84898FC21C06B7D200487F92 /* combination-2.html */; settings = {ASSET_TAGS = (); }; };
 		84901BA91BFB174200B4AD6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BA81BFB174200B4AD6A /* main.m */; };
 		84901BAC1BFB174200B4AD6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAB1BFB174200B4AD6A /* AppDelegate.m */; };
 		84901BAF1BFB174200B4AD6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAE1BFB174200B4AD6A /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		84898FBE1C06B22D00487F92 /* combination-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "combination-1.json"; sourceTree = "<group>"; };
 		84898FC01C06B66800487F92 /* combination-1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "combination-1.js"; sourceTree = "<group>"; };
+		84898FC21C06B7D200487F92 /* combination-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-2.html"; sourceTree = "<group>"; };
 		84901BA41BFB174200B4AD6A /* JEHighchartsDigesterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEHighchartsDigesterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84901BA81BFB174200B4AD6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84901BAA1BFB174200B4AD6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				84D401431C03F665001A754A /* combination-1.html */,
+				84898FC21C06B7D200487F92 /* combination-2.html */,
 				84901BDC1BFB2A2400B4AD6A /* baseline.js */,
 				84901BE41BFC26EA00B4AD6A /* donut.js */,
 				84901BE61BFC5F7B00B4AD6A /* donutLegend.js */,
@@ -219,6 +222,7 @@
 				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
 				84901BDE1BFB2A2400B4AD6A /* exporting.js in Resources */,
 				84901BB41BFB174200B4AD6A /* Assets.xcassets in Resources */,
+				84898FC31C06B7D200487F92 /* combination-2.html in Resources */,
 				84901BB21BFB174200B4AD6A /* Main.storyboard in Resources */,
 				84901BE11BFB2A2400B4AD6A /* jquery-1.9.0.js in Resources */,
 				84D401441C03F665001A754A /* combination-1.html in Resources */,

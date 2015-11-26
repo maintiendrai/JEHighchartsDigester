@@ -4,11 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Highcharts Example</title>
 
-    <script type="text/javascript" src="jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="file:///android_asset/jquery-1.9.0.js"></script>
     <script type="text/javascript">
-        
-        function greet(name){ return 'Hello, ' + name; }
-        
         function plot(data,  data3) {
         var chart = $('#container').highcharts(),
         inCome = data,
@@ -175,9 +172,10 @@
     </script>
 </head>
 <body>
-<script src="highcharts.js"></script>
+<script src="file:///android_asset/highcharts.js"></script>
+<script src="file:///android_asset/exporting.js"></script>
 
-<div id="container" style="min-width: 310px; height: 450px; margin: 0 auto"></div>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 </body>
 </html>
