@@ -1,28 +1,3 @@
-//function plot() {
-//    var chart = $('#container').highcharts();
-//    inCome = data;
-//    lenObj = inCome.length,
-//    series1 = [];
-//    series2 = [];
-//    
-//    chart.series[0].setData(inCome, true);
-////    chart.xAxis[1].setCategories(data3,true);
-//}
-//
-//function plots(data) {
-//    var chart = $('#container').highcharts();
-//    inCome = data;
-//    chart.series[0].setData(inCome, true);
-//}
-
-function greet(name){ return 'Hello, ' + name; }
-
-//function greet(name) {
-//    alert("Hello World!");
-////    document.getElementById('pagetitle').innerHTML = vars['title'];
-//    return "Hello, " + name + "!";
-//}
-
 $(function () {
 
     $(document).ready(function () {

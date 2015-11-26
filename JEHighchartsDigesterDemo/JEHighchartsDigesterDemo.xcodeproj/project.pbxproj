@@ -23,7 +23,6 @@
 		84901BE71BFC5F7B00B4AD6A /* donutLegend.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BE61BFC5F7B00B4AD6A /* donutLegend.js */; settings = {ASSET_TAGS = (); }; };
 		84901BE91BFC619800B4AD6A /* combination.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BE81BFC619800B4AD6A /* combination.js */; settings = {ASSET_TAGS = (); }; };
 		84D401441C03F665001A754A /* donutLegend.html in Resources */ = {isa = PBXBuildFile; fileRef = 84D401431C03F665001A754A /* donutLegend.html */; settings = {ASSET_TAGS = (); }; };
-		84EDC62E1C05A4E000BF2023 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 84EDC62D1C05A4E000BF2023 /* test.js */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		84901BE61BFC5F7B00B4AD6A /* donutLegend.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donutLegend.js; sourceTree = "<group>"; };
 		84901BE81BFC619800B4AD6A /* combination.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = combination.js; sourceTree = "<group>"; };
 		84D401431C03F665001A754A /* donutLegend.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = donutLegend.html; sourceTree = "<group>"; };
-		84EDC62D1C05A4E000BF2023 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +145,6 @@
 				84901BE41BFC26EA00B4AD6A /* donut.js */,
 				84901BE61BFC5F7B00B4AD6A /* donutLegend.js */,
 				84901BE81BFC619800B4AD6A /* combination.js */,
-				84EDC62D1C05A4E000BF2023 /* test.js */,
 			);
 			path = viewOption;
 			sourceTree = "<group>";
@@ -221,7 +218,6 @@
 				84901BE91BFC619800B4AD6A /* combination.js in Resources */,
 				84901BDF1BFB2A2400B4AD6A /* highcharts.js in Resources */,
 				84901BE31BFC1BB800B4AD6A /* xaxis.json in Resources */,
-				84EDC62E1C05A4E000BF2023 /* test.js in Resources */,
 				84901BE01BFB2A2400B4AD6A /* baseline.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
