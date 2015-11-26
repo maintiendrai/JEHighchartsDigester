@@ -43,8 +43,8 @@
 //method 1, 直接操作html
 - (void)htmlDigester {
 
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
-//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
+//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
     
     _htmlString  = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlFile];
@@ -156,7 +156,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
     //method 1
-    [self loadDatas];
+//    [self loadDatas];
     
     //method 2
 //    [self loadJSFiles];
