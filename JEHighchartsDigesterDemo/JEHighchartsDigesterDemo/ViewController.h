@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @interface ViewController : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWebView* webView;
+//@property (nonatomic, strong) IBOutlet UIWebView* donutWebView;
 
 @end
 

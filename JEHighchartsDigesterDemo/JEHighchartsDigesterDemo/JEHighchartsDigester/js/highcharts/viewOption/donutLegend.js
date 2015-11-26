@@ -1,3 +1,28 @@
+//function plot() {
+//    var chart = $('#container').highcharts();
+//    inCome = data;
+//    lenObj = inCome.length,
+//    series1 = [];
+//    series2 = [];
+//    
+//    chart.series[0].setData(inCome, true);
+////    chart.xAxis[1].setCategories(data3,true);
+//}
+//
+//function plots(data) {
+//    var chart = $('#container').highcharts();
+//    inCome = data;
+//    chart.series[0].setData(inCome, true);
+//}
+
+function greet(name){ return 'Hello, ' + name; }
+
+//function greet(name) {
+//    alert("Hello World!");
+////    document.getElementById('pagetitle').innerHTML = vars['title'];
+//    return "Hello, " + name + "!";
+//}
+
 $(function () {
 
     $(document).ready(function () {
@@ -65,9 +90,9 @@ $(function () {
                     allowPointSelect: true,
                     cursor: 'pointer',
                     dataLabels: {
-                        enabled: false
+                        enabled: true
                     },
-                    showInLegend: true,
+                    showInLegend: false,
                     point: {
                         events: {
                             legendItemClick: function (e) {
@@ -77,7 +102,7 @@ $(function () {
                     }
                 },
 
-                area: {
+                column: {
                     width: 10,
                     height: 10,
                     depth: 10,
@@ -100,19 +125,33 @@ $(function () {
                 floating: true,
                 align: 'left',
                 x: 10, // = marginLeft - default spacingLeft
+//                padding: 20,
                 itemWidth: 160,
+               symbolHeight: 16,
+               symbolWidth: 16,
+               symbolRadius: 8,
                 verticalAlign: 'bottom',
+                                   
+                itemMarginBottom: 16,
+                                   itemStyle: {
+                                   lineHeight: '100px'
+                                   },
+                                   itemStyle: {
+                                   font: '12pt Trebuchet MS, Verdana, sans-serif',
+                                   color: '#A0A0A0'
+                                   }
+                
             },
 
             series: [{
-                type: 'area',
+                type: 'column',
                 name: 'Jane',
                 top: 400,
                 //                                                        lineColor: '#666666',
                 // cropThreshold: 100,
                 yAxis: 1,
                 xAxis:1,
-                data: [3, 2, 1, 3, 4]
+                     data:  %@
             },
 
 
@@ -123,33 +162,21 @@ $(function () {
                     alpha: 45
                 },
                 //   align: 'center',
-                y: -100,
+//                y: -100,
                 verticalAlign: 'top',
                 name: 'Brands',
                 colorByPoint: true,
                 center: [140, 80], //写死了
-                size: 180,
+                size: 200,
                 innerSize: 90,
                 data: [{
-                    name: 'Microsoft Internet Explorer',
+                    name: '红外报警  20',
                     y: 56.33
                 }, {
-                    name: 'Chrome',
+                    name: '煤气报警  15',
                     y: 24.03,
                     sliced: true,
                     selected: true
-                }, {
-                    name: 'Firefox',
-                    y: 10.38
-                }, {
-                    name: 'Safari',
-                    y: 4.77
-                }, {
-                    name: 'Opera',
-                    y: 0.91
-                }, {
-                    name: 'Proprietary or Undetectable',
-                    y: 0.2
                 }]
             }]
         });

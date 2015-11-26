@@ -22,17 +22,17 @@ $(function () {
                                      }]
                              },
                              series: [
-                                      {
-                                          type: 'spline',
-                                          name: 'Average',
-                                          data: [3, 2.67, 3, 6.33, 3.33],
-                                          marker: {
-                                              lineWidth: 1,
-                                              lineColor: Highcharts.getOptions().colors[3],
-                                              fillColor: 'white'
-                                          },
-                                        fillOpacity: 0.3
-                                      },
+//                                      {
+//                                          type: 'spline',
+//                                          name: 'Average',
+//                                          data: [3, 2.67, 3, 6.33, 3.33],
+//                                          marker: {
+//                                              lineWidth: 1,
+//                                              lineColor: Highcharts.getOptions().colors[3],
+//                                              fillColor: 'white'
+//                                          },
+//                                        fillOpacity: 0.3
+//                                      },
                                       
                                       {
                                           type: 'pie',
@@ -51,7 +51,7 @@ $(function () {
                                                  color: Highcharts.getOptions().colors[2] // Joe's color
                                                  }],
                                           center: [100, 80],
-                                          size: 100,
+                                          size: 150,
                                           showInLegend: false,
                                           dataLabels: {
                                               enabled: false
