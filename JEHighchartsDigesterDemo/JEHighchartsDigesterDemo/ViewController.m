@@ -43,7 +43,9 @@
 //method 1, 直接操作html
 - (void)htmlDigester {
 
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"donutLegend" ofType:@"html"];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
+//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
+    
     _htmlString  = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlFile];
     
@@ -99,8 +101,8 @@
     //load baseline
 //    [self loadBaseline];
     
-    //load donutLegend
-    [self loadDonutLegend];
+    //load combination
+    [self loadCombination];
 
 }
 
@@ -125,10 +127,12 @@
 }
 
 
-- (void)loadDonutLegend {
-    NSString* donutPath = [[NSBundle mainBundle] pathForResource:@"donutLegend" ofType:@"js"];
+
+
+- (void)loadCombination {
+    NSString* donutPath = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"js"];
     NSString* donutInit = [NSString stringWithContentsOfFile:donutPath encoding:NSUTF8StringEncoding error:nil];
-    NSString* dataPath = [[NSBundle mainBundle] pathForResource: @"donutLegendData" ofType: @"json"];
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource: @"combination-1" ofType: @"json"];
     NSString* json = [NSString stringWithContentsOfFile: dataPath encoding: NSUTF8StringEncoding error:nil];
     NSString* theme = @"";
     NSString* baseline = [theme stringByAppendingFormat:donutInit, json];
