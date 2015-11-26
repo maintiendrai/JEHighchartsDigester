@@ -76,29 +76,6 @@
     NSLog(@"viewWillLayoutSubviews");
 }
 
-- (void)runJavaScript
-{
-    NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"donutLegend" ofType:@"html"];
-//     NSString *scriptPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
-    NSString *scriptString = [NSString stringWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:nil];
-    
-    JSContext *context = [[JSContext alloc] init];
-    
-    
-    [context evaluateScript:scriptString];
-//    [context evaluateScript:@"function greet(name){ return 'Hello, ' + name; }"];
-    
-//    [context evaluateScript:@"function plots(data) {var chart = $('#container').highcharts();inCome = [0, 1, 2];chart.series[0].setData(inCome, true);  return 'Hello, ' + name; }"];
-
-    
-    JSValue *function = context[@"greet"];
-    JSValue* result = [function callWithArguments:@[@"World"]];
-    
-//    NSLog(@"======================= %@", [result toString]);
-    context[@"hello"] = ^(NSString *text) {
-        NSLog(@"JS : %@",text);
-    };
-}
 
 
 //use when method2
@@ -113,25 +90,6 @@
     NSString* highchart = [NSString stringWithContentsOfFile:highChartPath encoding:NSUTF8StringEncoding error:nil];
     [self.webView stringByEvaluatingJavaScriptFromString:highchart];
     
-    
-    //load viewOption
-    //    NSString* donutPath = [[NSBundle mainBundle] pathForResource:@"donut" ofType:@"js"];
-    
-    
-    
-    //
-    //    NSString* xaxisPath = [[NSBundle mainBundle] pathForResource: @"xaxis" ofType: @"json"];
-    //    NSString* xaxis = [NSString stringWithContentsOfFile: xaxisPath encoding: NSUTF8StringEncoding error:nil];
-    //
-    
-    //
-    
-    
-//    NSString* donut = [theme stringByAppendingString:donutInit];
-    
-    
-    
-
 }
 
 //load viewOption
