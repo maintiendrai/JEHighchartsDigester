@@ -7,38 +7,13 @@
         
         <script type="text/javascript" src="jquery-1.9.0.js"></script>
         <script type="text/javascript">
-            
-            
-            
-            function plot(data, data3) {
-                var chart = $('#container').highcharts(),
-                    inCome = data,
-                    lenObj = inCome.length,
-                    series1 = [],
-                    series2 = [];
-
-                chart.series[0].setData(inCome, true);
-                chart.xAxis[1].setCategories(data3, true);
-            }
-        
-        function sleep(n) { //n表示的毫秒数
-            var start = new Date().getTime();
-            while (true) if (new Date().getTime() - start > n) break;
-        }
-        
-        
-        function pp() {
-            //$("#container").height() == 667px;
-            document.getElementById('container').clientHeight  = 20 + "px";
-            
-             document.getElementById("container").style.height = 20 + "px";
-        }
         
             $(function() {
 
                 $(document).ready(function() {
-
-                           //       sleep(10000);
+                                  
+                                  
+                    $("#container").height($(document).height()-30);
                                   
                     // Build the chart
                     $('#container').highcharts({

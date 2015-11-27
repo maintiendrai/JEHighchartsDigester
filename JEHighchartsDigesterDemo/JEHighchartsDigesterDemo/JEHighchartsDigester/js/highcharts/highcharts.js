@@ -11994,7 +11994,7 @@
             chart.chartWidth = mathMax(0, widthOption || chart.containerWidth || 600); // #1393, 1460
             chart.chartHeight = mathMax(0, pick(heightOption,
                 // the offsetHeight of an empty container is 0 in standard browsers, but 19 in IE7:
-                chart.containerHeight > 19 ? chart.containerHeight : $(document).height()-30));
+                chart.containerHeight > 19 ? chart.containerHeight : 400));
         },
 
         /**
