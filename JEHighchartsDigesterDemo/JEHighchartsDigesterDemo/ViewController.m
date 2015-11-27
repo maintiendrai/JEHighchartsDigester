@@ -49,8 +49,31 @@
     _htmlString  = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlFile];
     
+    
     [self.webView loadHTMLString:_htmlString baseURL:baseURL];
     self.webView.delegate = self;
+    
+//    [self jsOnload];
+    
+}
+
+
+- (void)jsOnload {
+    
+//    [self.webView stringByEvaluatingJavaScriptFromString:@"pp"];
+//    NSString *commond = @"window.onload=function(){document.body.offsetHeight = 700px;};"; //no use
+//
+//    NSString *commond = @"$(document).ready(function(){document.getElementById(\"container\").style.height= 700 + \"px\"});";
+//    NSString *commond = @"$(document).ready(function(){document.getElementById(\"container\").style.height = 700 + \"px\";});";
+   
+//    NSString *commond = @"window.onload=function(){document.getElementById(\"container\").style.height = 20 + \"px\";};";
+    
+//     NSString *commond = @"window.onload=function(){document.getElementById(\"container\").style.height = 700 + \"px\";};";
+     NSString *commond = @"$(\"#container\").ready(function($){document.getElementById(\"container\").style.height= 700 + \"px\"})";
+    
+    
+    
+    [self.webView stringByEvaluatingJavaScriptFromString:commond];
 }
 
 //method 2, 直接操作js，html采用拼接
@@ -155,6 +178,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
+    
+//    [self jsOnload];
     //method 1
 //    [self loadDatas];
     
