@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Highcharts Example</title>
         
-        <script type="text/javascript" src="jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
         <script type="text/javascript">
         
         
@@ -29,15 +29,12 @@
         });
         
         function mytitlePosition() {
-            return $('#container').height() * 0.4;
+            return $('#container').height() * 0.38;
         }
         
        
        $(function() {
          $(document).ready(function() {
-                           
-                           
-                           
                            
                            $("#container").height($(document).height()-30);
                            $("#container").width($(document).width());
@@ -51,31 +48,12 @@
                                                       title: {
                                                       text: '本月账单<br>￥<a>273.5',
                                                       align: 'center',
-                                                      //    y:300,
-                                                      y : mytitlePosition()
+                                                      y : mytitlePosition(),
+                                                      dy:30
                                                       },
-                                                      xAxis: [{ // Primary xAxis
-                                                              title: {
-                                                              text: '报警总数<br>2015',
-                                                              
-                                                              style: {
-                                                              font: '12pt Trebuchet MS, Verdana, sans-serif',
-                                                              "color": "#707070",
-                                                              "fontWeight": "bold"
-                                                              },
-                                                              x: $("#container").width() / 2 - 40,
-                                                              y: $("#container").height() / 3 - 30,
-                                                              },
-                                                              width: 0,
-                                                              height: 0,
-                                                              min: 0
-                                                              }],
-                                                      yAxis: [{ // Primary yAxis
-                                                              title: {
-                                                              text: ''
-                                                              },
-                                                              min: 0
-                                                              }],
+                                                      subTitle: {
+                                                      text: '哈哈'
+                                                      },
                                                       
                                                       tooltip: {
                                                       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -158,8 +136,13 @@
                            
                            
                            // $("#container").css('background-color', 'red');
+                           $(".highcharts-title tspan").eq(0).css('font-size','10px');
                            $(".highcharts-title tspan").eq(1).css('fill','red');
                            $(".highcharts-title tspan").eq(1).css('font-size','20px');
+                           $(".highcharts-title tspan").eq(2).css('font-size','30px');
+                           $(".highcharts-title tspan").eq(1).attr('dy', 30);
+                           
+                          
                           // alert($(".highcharts-title tspan").eq(1).width());
                            
                            //  $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
@@ -180,9 +163,9 @@
     </head>
     
     <body height="100%">
-        <script src="highcharts.js"></script>
+        <script src="../highcharts.js"></script>
         <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0;"/></div>
-        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; position:absolute;z-index:0 ">
+        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
         </div>
         
     </body>
