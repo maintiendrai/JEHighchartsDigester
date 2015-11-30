@@ -25,6 +25,7 @@
 		84901BE51BFC26EA00B4AD6A /* donut.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BE41BFC26EA00B4AD6A /* donut.js */; settings = {ASSET_TAGS = (); }; };
 		84901BE71BFC5F7B00B4AD6A /* donutLegend.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BE61BFC5F7B00B4AD6A /* donutLegend.js */; settings = {ASSET_TAGS = (); }; };
 		84901BE91BFC619800B4AD6A /* combination.js in Resources */ = {isa = PBXBuildFile; fileRef = 84901BE81BFC619800B4AD6A /* combination.js */; settings = {ASSET_TAGS = (); }; };
+		84AA1AF61C0C39E90080E780 /* icon_utility_payed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AA1AF51C0C39E90080E780 /* icon_utility_payed.png */; settings = {ASSET_TAGS = (); }; };
 		84D401441C03F665001A754A /* combination-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 84D401431C03F665001A754A /* combination-1.html */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		84901BE41BFC26EA00B4AD6A /* donut.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donut.js; sourceTree = "<group>"; };
 		84901BE61BFC5F7B00B4AD6A /* donutLegend.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donutLegend.js; sourceTree = "<group>"; };
 		84901BE81BFC619800B4AD6A /* combination.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = combination.js; sourceTree = "<group>"; };
+		84AA1AF51C0C39E90080E780 /* icon_utility_payed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_utility_payed.png; sourceTree = "<group>"; };
 		84D401431C03F665001A754A /* combination-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-1.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 		84901BCD1BFB276800B4AD6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84AA1AF51C0C39E90080E780 /* icon_utility_payed.png */,
 				84901BCE1BFB276800B4AD6A /* data.json */,
 				84901BE21BFC1BB800B4AD6A /* xaxis.json */,
 				84898FBE1C06B22D00487F92 /* combination-1.json */,
@@ -229,6 +232,7 @@
 				84901BE71BFC5F7B00B4AD6A /* donutLegend.js in Resources */,
 				84901BE91BFC619800B4AD6A /* combination.js in Resources */,
 				84901BDF1BFB2A2400B4AD6A /* highcharts.js in Resources */,
+				84AA1AF61C0C39E90080E780 /* icon_utility_payed.png in Resources */,
 				84901BE31BFC1BB800B4AD6A /* xaxis.json in Resources */,
 				84901BE01BFB2A2400B4AD6A /* baseline.js in Resources */,
 			);

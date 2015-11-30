@@ -11,9 +11,9 @@
         
         
         $(window).load(function() {
-            alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
+         //   alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
                        $(".highcharts-title").offset({y: "115"});
-                       alert ($('#container').highcharts().title.y);
+           //            alert ($('#container').highcharts().title.y);
                        //$('#container').highcharts().title = "444";
                        
                        /**
@@ -33,155 +33,158 @@
         }
         
        
+       $(function() {
+         $(document).ready(function() {
+                           
+                           
+                           
+                           
+                           $("#container").height($(document).height()-30);
+                           $("#container").width($(document).width());
+                           // Build the chart
+                           $('#container').highcharts({
+                                                      chart: {
+                                                      //                                               height: 480,
+                                                      //                                               width: 320
+                                                      },
+                                                      
+                                                      title: {
+                                                      text: '本月账单<br>￥<a>273.5',
+                                                      align: 'center',
+                                                      //    y:300,
+                                                      y : mytitlePosition()
+                                                      },
+                                                      xAxis: [{ // Primary xAxis
+                                                              title: {
+                                                              text: '报警总数<br>2015',
+                                                              
+                                                              style: {
+                                                              font: '12pt Trebuchet MS, Verdana, sans-serif',
+                                                              "color": "#707070",
+                                                              "fontWeight": "bold"
+                                                              },
+                                                              x: $("#container").width() / 2 - 40,
+                                                              y: $("#container").height() / 3 - 30,
+                                                              },
+                                                              width: 0,
+                                                              height: 0,
+                                                              min: 0
+                                                              }],
+                                                      yAxis: [{ // Primary yAxis
+                                                              title: {
+                                                              text: ''
+                                                              },
+                                                              min: 0
+                                                              }],
+                                                      
+                                                      tooltip: {
+                                                      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                      },
+                                                      plotOptions: {
+                                                      pie: {
+                                                      allowPointSelect: true,
+                                                      cursor: 'pointer',
+                                                      dataLabels: {
+                                                      enabled: false
+                                                      },
+                                                      showInLegend: true
+                                                      },
+                                                      
+                                                      spline: {
+                                                      width: 10,
+                                                      height: 10,
+                                                      depth: 10
+                                                      }
+                                                      
+                                                      },
+                                                      
+                                                      legend: {
+                                                      floating: true,
+                                                      align: 'left',
+                                                      x: 10, // = marginLeft - default spacingLeft
+                                                      itemWidth: $("#container").width(),
+                                                      verticalAlign: 'bottom',
+                                                      //                padding: 20,
+                                                      symbolHeight: 16,
+                                                      symbolWidth: 16,
+                                                      symbolRadius: 8,
+                                                      verticalAlign: 'bottom',
+                                                      
+                                                      itemMarginBottom: 16,
+                                                      itemStyle: {
+                                                      lineHeight: '100px'
+                                                      },
+                                                      itemStyle: {
+                                                      font: '12pt Trebuchet MS, Verdana, sans-serif',
+                                                      color: '#A0A0A0'
+                                                      }
+                                                      },
+                                                      
+                                                      series: [{
+                                                               //xAxis: 0,
+                                                               yAxis: 0,
+                                                               type: 'pie',
+                                                               options3d: {
+                                                               enabled: false,
+                                                               alpha: 45
+                                                               },
+                                                               align: 'top',
+                                                               //name: 'Brands',
+                                                               colorByPoint: true,
+                                                               center: ["50%", "35%"],
+                                                               size: 230,
+                                                               innerSize: 120,
+                                                               data: [{
+                                                                      name: 'Microsoft Internet Explorer',
+                                                                      y: 56.33
+                                                                      }, {
+                                                                      name: 'Chrome',
+                                                                      y: 24.03
+                                                                      }, {
+                                                                      name: 'Firefox',
+                                                                      y: 10.38
+                                                                      }, {
+                                                                      name: 'Safari',
+                                                                      y: 4.77
+                                                                      }, {
+                                                                      name: 'Opera',
+                                                                      y: 0.91
+                                                                      }, {
+                                                                      name: 'Proprietary or Undetectable',
+                                                                      y: 0.2
+                                                                      }]
+                                                               }]
+                                                      });
+                           
+                           
+                           // $("#container").css('background-color', 'red');
+                           $(".highcharts-title tspan").eq(1).css('fill','red');
+                           $(".highcharts-title tspan").eq(1).css('font-size','20px');
+                          // alert($(".highcharts-title tspan").eq(1).width());
+                           
+                           //  $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
+                           
+                           //  $(".highcharts-title").css('top', $("#text").height() + "px");
+                           //  $(".highcharts-title").css('top', 115));
+                         //  alert("............" + $(".highcharts-title").position().top);
+                           
+                           //  chart.series[0].setY(300, true);
+                           
+                           });
+         
+         
+         });
         
         
-            $(function() {
-                $(document).ready(function() {
-                               
-                               
-                    
-                                  
-                    $("#container").height($(document).height()-30);
-                                  $("#container").width($(document).width());
-                    // Build the chart
-                    $('#container').highcharts({
-                        chart: {
-                            //                                               height: 480,
-                            //                                               width: 320
-                        },
-                                               
-                                               title: {
-                                               text: '本月账单<br>￥<a>273.5',
-                                               align: 'center',
-                                           //    y:300,
-                                            y : mytitlePosition()
-                                               },
-                        xAxis: [{ // Primary xAxis
-                            title: {
-                                text: '报警总数<br>2015',
-
-                                style: {
-                                    font: '12pt Trebuchet MS, Verdana, sans-serif',
-                                        "color": "#707070",
-                                        "fontWeight": "bold"
-                                },
-                                x: $("#container").width() / 2 - 40,
-                                y: $("#container").height() / 3 - 30,
-                            },
-                            width: 0,
-                            height: 0,
-                            min: 0
-                        }],
-                        yAxis: [{ // Primary yAxis
-                            title: {
-                                text: ''
-                            },
-                            min: 0
-                        }],
-
-                        tooltip: {
-                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                        },
-                        plotOptions: {
-                            pie: {
-                                allowPointSelect: true,
-                                cursor: 'pointer',
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                showInLegend: true
-                            },
-
-                            spline: {
-                                width: 10,
-                                height: 10,
-                                depth: 10
-                            }
-
-                        },
-
-                        legend: {
-                            floating: true,
-                            align: 'left',
-                            x: 10, // = marginLeft - default spacingLeft
-                            itemWidth: $("#container").width(),
-                            verticalAlign: 'bottom',
-                            //                padding: 20,
-                            symbolHeight: 16,
-                            symbolWidth: 16,
-                            symbolRadius: 8,
-                            verticalAlign: 'bottom',
-
-                            itemMarginBottom: 16,
-                            itemStyle: {
-                                lineHeight: '100px'
-                            },
-                            itemStyle: {
-                                font: '12pt Trebuchet MS, Verdana, sans-serif',
-                                color: '#A0A0A0'
-                            }
-                        },
-
-                        series: [{
-                            //xAxis: 0,
-                            yAxis: 0,
-                            type: 'pie',
-                            options3d: {
-                                enabled: false,
-                                alpha: 45
-                            },
-                            align: 'top',
-                            //name: 'Brands',
-                            colorByPoint: true,
-                            center: ["50%", "35%"],
-                            size: 230,
-                            innerSize: 120,
-                            data: [{
-                                name: 'Microsoft Internet Explorer',
-                                y: 56.33
-                            }, {
-                                name: 'Chrome',
-                                y: 24.03
-                            }, {
-                                name: 'Firefox',
-                                y: 10.38
-                            }, {
-                                name: 'Safari',
-                                y: 4.77
-                            }, {
-                                name: 'Opera',
-                                y: 0.91
-                            }, {
-                                name: 'Proprietary or Undetectable',
-                                y: 0.2
-                            }]
-                        }]
-                    });
-                                  
-                             
-                                 // $("#container").css('background-color', 'red');
-                                  $(".highcharts-title tspan").eq(1).css('fill','red');
-                                  $(".highcharts-title tspan").eq(1).css('font-size','20px');
-                                  alert($(".highcharts-title tspan").eq(1).width());
-                                  
-                             //  $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
-                                  
-                                //  $(".highcharts-title").css('top', $("#text").height() + "px");
-                                //  $(".highcharts-title").css('top', 115));
-                                  alert("............" + $(".highcharts-title").position().top);
-                                  
-                                //  chart.series[0].setY(300, true);
-                                 
-                });
-              
-              
-            });
         </script>
     </head>
     
     <body height="100%">
         <script src="highcharts.js"></script>
-        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
+        <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0;"/></div>
+        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; position:absolute;z-index:0 ">
+        </div>
+        
     </body>
 
 </html>
