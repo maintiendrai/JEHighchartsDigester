@@ -5,20 +5,41 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Highcharts Example</title>
         
-        <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="jquery-1.9.0.js"></script>
         <script type="text/javascript">
         
         
         
         $(window).load(function() {
             alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
+                       $(".highcharts-title").offset({y: "115"});
+                       alert ($('#container').highcharts().title.y);
+                       //$('#container').highcharts().title = "444";
+                       
+                       /**
+                       
+                       $.each($('#container').highcharts().title,function(key,val){
+                              if($.isPlainObject(val) || $.isArray(val)){
+                              subObj(val);
+                              }else{
+                              alert(key+'='+val);
+                              }
+                              });
+                        **/
         });
         
+        function mytitlePosition() {
+            return $('#container').height() * 0.4;
+        }
+        
+       
         
         
             $(function() {
                 $(document).ready(function() {
                                
+                               
+                    
                                   
                     $("#container").height($(document).height()-30);
                                   $("#container").width($(document).width());
@@ -32,8 +53,8 @@
                                                title: {
                                                text: '本月账单<br>￥<a>273.5',
                                                align: 'center',
-                                               verticalAlign: 'middle',
-                                               
+                                           //    y:300,
+                                            y : mytitlePosition()
                                                },
                         xAxis: [{ // Primary xAxis
                             title: {
@@ -143,17 +164,23 @@
                                   $(".highcharts-title tspan").eq(1).css('font-size','20px');
                                   alert($(".highcharts-title tspan").eq(1).width());
                                   
-                               $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
+                             //  $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
                                   
+                                //  $(".highcharts-title").css('top', $("#text").height() + "px");
+                                //  $(".highcharts-title").css('top', 115));
+                                  alert("............" + $(".highcharts-title").position().top);
                                   
+                                //  chart.series[0].setY(300, true);
+                                 
                 });
+              
               
             });
         </script>
     </head>
     
     <body height="100%">
-        <script src="../highcharts.js"></script>
+        <script src="highcharts.js"></script>
         <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
     </body>
 
