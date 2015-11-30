@@ -43,8 +43,8 @@
 //method 1, 直接操作html
 - (void)htmlDigester {
 
-//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
+//    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
     
     _htmlString  = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlFile];
@@ -172,7 +172,7 @@
 
 //use when method1
 - (void)loadDatas {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56])"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11])"];
 }
 
 
@@ -181,7 +181,7 @@
     
 //    [self jsOnload];
     //method 1
-//    [self loadDatas];
+    [self loadDatas];
     
     //method 2
 //    [self loadJSFiles];

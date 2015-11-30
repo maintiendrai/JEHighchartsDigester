@@ -5,22 +5,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Highcharts Example</title>
         
-        <script type="text/javascript" src="jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
         <script type="text/javascript">
         
+        
+        
+        $(window).load(function() {
+            alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
+        });
+        
+        
+        
             $(function() {
-
                 $(document).ready(function() {
-                                  
+                               
                                   
                     $("#container").height($(document).height()-30);
-                                  
+                                  $("#container").width($(document).width());
                     // Build the chart
                     $('#container').highcharts({
                         chart: {
                             //                                               height: 480,
                             //                                               width: 320
                         },
+                                               
+                                               title: {
+                                               text: '本月账单<br>￥<a>273.5',
+                                               align: 'center',
+                                               verticalAlign: 'middle',
+                                               
+                                               },
                         xAxis: [{ // Primary xAxis
                             title: {
                                 text: '报警总数<br>2015',
@@ -44,9 +58,6 @@
                             min: 0
                         }],
 
-                        title: {
-                            text: ''
-                        },
                         tooltip: {
                             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
                         },
@@ -91,7 +102,7 @@
                         },
 
                         series: [{
-                            xAxis: 0,
+                            //xAxis: 0,
                             yAxis: 0,
                             type: 'pie',
                             options3d: {
@@ -99,7 +110,7 @@
                                 alpha: 45
                             },
                             align: 'top',
-                            name: 'Brands',
+                            //name: 'Brands',
                             colorByPoint: true,
                             center: ["50%", "35%"],
                             size: 230,
@@ -125,13 +136,24 @@
                             }]
                         }]
                     });
+                                  
+                             
+                                 // $("#container").css('background-color', 'red');
+                                  $(".highcharts-title tspan").eq(1).css('fill','red');
+                                  $(".highcharts-title tspan").eq(1).css('font-size','20px');
+                                  alert($(".highcharts-title tspan").eq(1).width());
+                                  
+                               $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
+                                  
+                                  
                 });
+              
             });
         </script>
     </head>
     
     <body height="100%">
-        <script src="highcharts.js"></script>
+        <script src="../highcharts.js"></script>
         <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
     </body>
 
