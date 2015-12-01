@@ -5,11 +5,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Highcharts Example</title>
         
-        <script type="text/javascript" src="jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
         <script type="text/javascript">
-        
-        
-        
+            
         $(window).load(function() {
          //   alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
                       // $(".highcharts-title").offset({y: "115"});
@@ -29,22 +27,18 @@
                               }
                               });
                         **/
-                       
-                       
-                       
-                       
         });
         
         function mytitlePosition() {
-            return $('#container').height() * 0.38;
+            return $('#container').height() * 0.14;
         }
         
        
        $(function() {
          $(document).ready(function() {
                            
-                           $("#container").height($(document).height()-30);
-                           $("#container").width($(document).width());
+                           $("#container").height($(document).height()*98/100);
+                           $("#container").width($(document).width()*98/100);
                            // Build the chart
                            $('#container').highcharts({
                                                       chart: {
@@ -72,21 +66,29 @@
                                                       dataLabels: {
                                                       enabled: false
                                                       },
-                                                      showInLegend: true
+                                                      showInLegend: true,
+                                                      point: {
+                                                      events: {
+                                                      legendItemClick: function(e) {
+                                                      e.preventDefault();
+                                                      }
+                                                      }
+                                                      }
                                                       },
                                                       
                                                       spline: {
                                                       width: 10,
                                                       height: 10,
                                                       depth: 10
-                                                      }
+                                                      },
+                                                      
                                                       
                                                       },
                                                       
                                                       legend: {
                                                       floating: true,
                                                       align: 'left',
-                                                      x: 10, // = marginLeft - default spacingLeft
+                                                      x: -10, // = marginLeft - default spacingLeft
                                                       itemWidth: $("#container").width(),
                                                       verticalAlign: 'bottom',
                                                       //                padding: 20,
@@ -94,7 +96,7 @@
                                                       symbolWidth: 16,
                                                       symbolRadius: 8,
                                                       verticalAlign: 'bottom',
-                                                      
+                                                      backgroundColor: '#E2EAEA',
                                                       itemMarginBottom: 16,
                                                       itemStyle: {
                                                       lineHeight: '100px'
@@ -116,7 +118,7 @@
                                                                align: 'top',
                                                                //name: 'Brands',
                                                                colorByPoint: true,
-                                                               center: ["50%", "35%"],
+                                                               center: ["50%", "5%"],
                                                                size: 230,
                                                                innerSize: 120,
                                                                data: [
@@ -143,17 +145,26 @@
                                   $(".highcharts-legend-item tspan").eq(i*2+1).attr('dx', parseFloat($("#container").css('width'))*4/5-parseFloat($(".highcharts-legend-item tspan").eq(i*2+1).css('width'))-parseFloat($(".highcharts-legend-item tspan").eq(i*2).css('width')));
                            });
                            
-                 
-                          // alert($(".highcharts-title tspan").eq(1).width());
+                           //$(".highcharts-legend").transition({x:'0px'});
+                           //$(".highcharts-legend").css("transform", "x(0px)");
                            
-                           //  $(".highcharts-title").position().top = ($(".highcharts-series-group").position().top + 115);
+                    //       $(".highcharts-legend").css({
+                     //                   "-webkit-transform":"translate(100px,100px)",
+                       //                 "-ms-transform":"translate(100px,100px)",
+                         //               "transform":"translate(100px,100px)"
+                           //             });
                            
-                           //  $(".highcharts-title").css('top', $("#text").height() + "px");
-                           //  $(".highcharts-title").css('top', 115));
-                         //  alert("............" + $(".highcharts-title").position().top);
                            
-                           //  chart.series[0].setY(300, true);
+                        //   alert($(".highcharts-legend").css("transform").x);
                            
+                           var transform = $(".highcharts-legend").yAxis;
+                           
+                           alert(transform);
+                           
+                           var top = 514;
+                         //  $('.highcharts-legend').css('-webkit-transform',  "translate(0px,"+top+"px");
+                           
+                         //  $('.highcharts-legend').css('transform', 'translateX(-' + 0 + 'px)');
                            });
          
          
@@ -164,7 +175,7 @@
     </head>
     
     <body height="100%">
-        <script src="highcharts.js"></script>
+        <script src="../highcharts.js"></script>
         <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0;"/></div>
         <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
         </div>
