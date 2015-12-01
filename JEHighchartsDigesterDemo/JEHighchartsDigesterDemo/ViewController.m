@@ -172,7 +172,7 @@
 
 //use when method1
 - (void)loadDatas {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11])"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([['物业费 <a>￥23.5', 23.5],['小区管理费 <a>￥113.5', 113.5],['车辆监督 <a>￥7.5', 7.5],['公摊啊费 <a>￥7.5', 7.5],['垃圾清理 <a>￥7.5', 7.5],['其它费用 <a>￥7.5', 7.5]])"];
 }
 
 
@@ -181,7 +181,7 @@
     
 //    [self jsOnload];
     //method 1
-//    [self loadDatas];
+    [self loadDatas];
     
     //method 2
 //    [self loadJSFiles];

@@ -5,9 +5,32 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Highcharts Example</title>
         
-        <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+        <script type="text/javascript" src="jquery-1.9.0.js"></script>
         <script type="text/javascript">
             
+            function plot(data, data3) {
+                var chart = $('#container').highcharts(),
+                inCome = data,
+                lenObj = inCome.length,
+                series1 = [],
+                series2 = [];
+                
+                chart.series[0].setData(inCome, true);
+//                chart.xAxis[1].setCategories(data3, true);
+                // $("#container").css('background-color', 'red');
+                $(".highcharts-title tspan").eq(0).css('font-size','10px');
+                $(".highcharts-title tspan").eq(1).css('fill','red');
+                $(".highcharts-title tspan").eq(1).css('font-size','20px');
+                $(".highcharts-title tspan").eq(2).css('font-size','30px');
+                $(".highcharts-title tspan").eq(1).attr('dy', 30);
+                
+                
+                $.each($(".highcharts-legend-item"),function(i,item){
+                       $(".highcharts-legend-item tspan").eq(i*2+1).attr('dx', parseFloat($("#container").css('width'))*4/5-parseFloat($(".highcharts-legend-item tspan").eq(i*2+1).css('width'))-parseFloat($(".highcharts-legend-item tspan").eq(i*2).css('width')));
+                       });
+            }
+        
+        
         $(window).load(function() {
          //   alert("xxxxxx" + ($(".highcharts-series-group").position().top + 230));
                       // $(".highcharts-title").offset({y: "115"});
@@ -122,12 +145,7 @@
                                                                size: 230,
                                                                innerSize: 120,
                                                                data: [
-                                                                      ['物业费 <a>￥23.5', 23.5],
-                                                                      ['小区管理费 <a>￥113.5', 113.5],
-                                                                      ['车辆监督 <a>￥7.5', 7.5],
-                                                                      ['公摊啊费 <a>￥7.5', 7.5],
-                                                                      ['垃圾清理 <a>￥7.5', 7.5],
-                                                                      ['其它费用 <a>￥7.5', 7.5]
+                                                                      
                                                                ]
                                                             }]
                                                       });
@@ -145,26 +163,7 @@
                                   $(".highcharts-legend-item tspan").eq(i*2+1).attr('dx', parseFloat($("#container").css('width'))*4/5-parseFloat($(".highcharts-legend-item tspan").eq(i*2+1).css('width'))-parseFloat($(".highcharts-legend-item tspan").eq(i*2).css('width')));
                            });
                            
-                           //$(".highcharts-legend").transition({x:'0px'});
-                           //$(".highcharts-legend").css("transform", "x(0px)");
                            
-                    //       $(".highcharts-legend").css({
-                     //                   "-webkit-transform":"translate(100px,100px)",
-                       //                 "-ms-transform":"translate(100px,100px)",
-                         //               "transform":"translate(100px,100px)"
-                           //             });
-                           
-                           
-                        //   alert($(".highcharts-legend").css("transform").x);
-                           
-                           var transform = $(".highcharts-legend").yAxis;
-                           
-                           alert(transform);
-                           
-                           var top = 514;
-                         //  $('.highcharts-legend').css('-webkit-transform',  "translate(0px,"+top+"px");
-                           
-                         //  $('.highcharts-legend').css('transform', 'translateX(-' + 0 + 'px)');
                            });
          
          
@@ -175,7 +174,7 @@
     </head>
     
     <body height="100%">
-        <script src="../highcharts.js"></script>
+        <script src="highcharts.js"></script>
         <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0;"/></div>
         <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
         </div>
