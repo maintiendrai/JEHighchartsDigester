@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840B3CF81C0DA0A400BD9189 /* jquery-transformer.js in Resources */ = {isa = PBXBuildFile; fileRef = 840B3CF71C0DA0A400BD9189 /* jquery-transformer.js */; settings = {ASSET_TAGS = (); }; };
 		84898FBF1C06B22E00487F92 /* combination-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84898FBE1C06B22D00487F92 /* combination-1.json */; settings = {ASSET_TAGS = (); }; };
 		84898FC11C06B66800487F92 /* combination-1.js in Resources */ = {isa = PBXBuildFile; fileRef = 84898FC01C06B66800487F92 /* combination-1.js */; settings = {ASSET_TAGS = (); }; };
 		84898FC31C06B7D200487F92 /* combination-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 84898FC21C06B7D200487F92 /* combination-2.html */; settings = {ASSET_TAGS = (); }; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840B3CF71C0DA0A400BD9189 /* jquery-transformer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-transformer.js"; sourceTree = "<group>"; };
 		84898FBE1C06B22D00487F92 /* combination-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "combination-1.json"; sourceTree = "<group>"; };
 		84898FC01C06B66800487F92 /* combination-1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "combination-1.js"; sourceTree = "<group>"; };
 		84898FC21C06B7D200487F92 /* combination-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-2.html"; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			children = (
 				84901BD91BFB2A2400B4AD6A /* exporting.js */,
 				84901BDA1BFB2A2400B4AD6A /* highcharts.js */,
-				840B3CF71C0DA0A400BD9189 /* jquery-transformer.js */,
 				84901BDB1BFB2A2400B4AD6A /* viewOption */,
 			);
 			path = highcharts;
@@ -223,7 +220,6 @@
 			files = (
 				84901BB71BFB174200B4AD6A /* LaunchScreen.storyboard in Resources */,
 				84898FBF1C06B22E00487F92 /* combination-1.json in Resources */,
-				840B3CF81C0DA0A400BD9189 /* jquery-transformer.js in Resources */,
 				84901BE51BFC26EA00B4AD6A /* donut.js in Resources */,
 				84898FC11C06B66800487F92 /* combination-1.js in Resources */,
 				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
