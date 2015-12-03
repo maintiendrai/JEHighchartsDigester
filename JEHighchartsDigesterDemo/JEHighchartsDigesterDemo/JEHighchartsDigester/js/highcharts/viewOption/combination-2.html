@@ -30,6 +30,23 @@
     function mytitlePosition() {
       return $('#container').height() * 0.14;
     }
+  
+    function diameter() {
+        if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+            return $("#container").width() * 3 / 5;
+        } else {
+            return 230;
+        }
+    }
+  
+    function innerDiameter() {
+        if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+            return $("#container").width() * 3 / 9;
+        } else {
+            return 120;
+        }
+    }
+
 
 
     $(function() {
@@ -117,10 +134,9 @@
             //name: 'Brands',
             colorByPoint: true,
             center: ["50%", "5%"],
-            size: $("#container").width() * 3 / 5,
-            innerSize: $("#container").width() * 3 / 9,
+            size: diameter(),
+            innerSize: innerDiameter(),
             data: [
-
             ]
           }]
         });
