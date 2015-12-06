@@ -18,6 +18,26 @@
                 chart.xAxis[1].setCategories(data3, true);
             }
         
+        function mytitlePosition() {
+            return $('#container').height() * 0.14;
+        }
+        
+        function diameter() {
+            if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+                return $("#container").width() * 3 / 5;
+            } else {
+                return 230;
+            }
+        }
+        
+        function innerDiameter() {
+            if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+                return $("#container").width() * 3 / 9;
+            } else {
+                return 120;
+            }
+        }
+        
 
             $(function() {
               
@@ -26,15 +46,10 @@
                 $('#container').highcharts({
                     xAxis: [{ // Primary xAxis
                         title: {
-                            text: '报警总数<br>2015',
-
-                            style: {
-                                font: '12pt Trebuchet MS, Verdana, sans-serif',
-                                    "color": "#707070",
-                                    "fontWeight": "bold"
-                            },
-                            x: $("#container").width() / 2 - 40,
-                            y: $("#container").height() / 3 - 30,
+                            text: '本月账单<br>￥<a>273.5',
+                            align: 'center',
+                            y: mytitlePosition(),
+                            dy: 30
                         },
                         width: 0,
                         height: 0,
@@ -122,7 +137,7 @@
                         // cropThreshold: 100,
                         yAxis: 1,
                         xAxis: 1,
-                        data: []
+                        data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
                     },
 
 
@@ -135,18 +150,14 @@
                             alpha: 45
                         },
                         align: 'top',
-                        name: 'Brands',
                         colorByPoint: true,
                         center: ["50%", "35%"],
-                        size: 230,
-                        innerSize: 120,
-                        data: [{
-                            name: '红外报警  20',
-                            y: 56.33
-                        }, {
-                            name: '煤气报警  15',
-                            y: 24.03
-                        }]
+                        size: diameter(),
+                        innerSize: innerDiameter(),
+                        data: [
+                               ['红外报警 <a>20', 20],
+                               ['煤气报警 <a>15', 15]
+                        ]
                     }]
                 });
             });
