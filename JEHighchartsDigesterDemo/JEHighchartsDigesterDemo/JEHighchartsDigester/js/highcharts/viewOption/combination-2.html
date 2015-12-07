@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Highcharts Example</title>
 
-  <script type="text/javascript" src="../../jquery-1.9.0.js"></script>
+  <script type="text/javascript" src="jquery-1.9.0.js"></script>
   <script type="text/javascript">
     function plot(data, data3) {
       var chart = $('#container').highcharts(),
@@ -124,7 +124,7 @@
 
           series: [{
             //xAxis: 0,
-            yAxis: 0,
+            //yAxis: 0,
             type: 'pie',
             options3d: {
               enabled: false,
@@ -137,6 +137,7 @@
             size: diameter(),
             innerSize: innerDiameter(),
             data: [
+                   ['物业费 <a>￥23.5', 23.5],['小区管理费 <a>￥113.5', 113.5],['车辆监督 <a>￥7.5', 7.5],['公摊啊费 <a>￥7.5', 7.5],['垃圾清理 <a>￥7.5', 7.5],['其它费用 <a>￥7.5', 7.5]
             ]
           }]
         });
@@ -149,7 +150,7 @@
 </head>
 
 <body height="100%">
-  <script src="../highcharts.js"></script>
+  <script src="highcharts.js"></script>
   <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0;" /></div>
   <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
   </div>
