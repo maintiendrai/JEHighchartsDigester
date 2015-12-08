@@ -8,13 +8,10 @@ $(function () {
             text: 'Source: WorldClimate.com',
             x: -20
         },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
+        xAxis: %@,
         yAxis: {
             title: {
-                text: 'Temperature (°C)'
+                text: ' '
             },
             plotLines: [{
                 value: 0,

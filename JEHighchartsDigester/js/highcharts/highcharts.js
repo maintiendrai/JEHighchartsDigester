@@ -1577,7 +1577,7 @@
 
         credits: {
             enabled: true,
-            text: 'Highcharts.com',
+//            text: 'Highcharts.com',
             href: 'http://www.highcharts.com',
             position: {
                 align: 'right',
