@@ -21,6 +21,7 @@
       $(".highcharts-title tspan").eq(2).css('font-size', '30px');
       $(".highcharts-title tspan").eq(1).attr('dy', 30);
       $(".highcharts-legend rect").eq(0).attr('height', $("#container").height()*4/10);
+      $(".highcharts-legend rect").eq(0).attr('width', $("#container").width());
       $(".highcharts-legend").css({"transform": "translate(0px," + $("#container").height()*6/10 +"px)"});
 
       $.each($(".highcharts-legend-item"), function(i, item) {
