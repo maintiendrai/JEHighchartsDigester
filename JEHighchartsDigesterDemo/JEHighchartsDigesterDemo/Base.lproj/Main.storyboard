@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,16 +20,26 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-XW-ouD">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nR4-XW-ouD" secondAttribute="trailing" id="03e-pg-qrw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR4-XW-ouD" secondAttribute="bottom" id="6Qe-iw-PGj"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Fb2-zY-656"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="J0z-Cc-UZy"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nys-e2-LW1"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="thQ-18-Qps"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fb2-zY-656"/>
+                                <exclude reference="thQ-18-Qps"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="webView" destination="nR4-XW-ouD" id="Zch-pt-ESt"/>
