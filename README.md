@@ -9,7 +9,10 @@ JEHighchartsDigester is a html5 chart highcharts framework for iOS and Android
 
 
 # iOS Highcharts Sample
+
 该DEMO主要用于演示iOS APP中用UIWebView展示highCharts，如下是演示图
+
+
 ![image](https://github.com/maintiendrai/JEHighchartsDigester/blob/master/combination-2.gif)
 
 
