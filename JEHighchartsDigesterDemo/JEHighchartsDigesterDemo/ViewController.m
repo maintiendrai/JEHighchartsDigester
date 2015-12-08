@@ -173,7 +173,7 @@
 //use when method1
 - (void)loadDatas {
     //combination 2
-    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([['物业费 <a>￥23.5', 23.5],['小区管理费 <a>￥113.5', 113.5],['车辆监督 <a>￥7.5', 7.5],['公摊啊费 <a>￥7.5', 7.5],['垃圾清理 <a>￥7.5', 7.5],['其它费用 <a>￥7.5', 7.5]])"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"plot([['物业费 <a>￥23.5', 23.5],['小区管理费 <a>￥13.5', 13.5],['车辆监督 <a>￥17.5', 17.5],['公摊啊费 <a>￥3.5', 3.5],['垃圾清理 <a>￥5.5', 5.5],['其它费用 <a>￥7.5', 7.5]])"];
     
     //[self.webView stringByEvaluatingJavaScriptFromString:@"plot([5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11])"];
 }
