@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Highcharts Example</title>
+
+  <script type="text/javascript" src="jquery-1.9.0.js"></script>
+  <script type="text/javascript">
+    function plot(data,  data3) {
+      var chart = $('#container').highcharts(),
+        inCome = data,
+        lenObj = inCome.length,
+        series1 = [],
+        series2 = [];
+      chart.series[0].setData(inCome, true);
+
+      $(".highcharts-title tspan").eq(0).css('font-size', '10px');
+      $(".highcharts-title tspan").eq(1).css('fill', 'red');
+      $(".highcharts-title tspan").eq(1).css('font-size', '20px');
+      $(".highcharts-title tspan").eq(2).css('font-size', '30px');
+      $(".highcharts-title tspan").eq(1).attr('dy', 30);
+      $(".highcharts-legend rect").eq(0).attr('height', $("#container").height()*4/10);
+      $(".highcharts-legend rect").eq(0).attr('width', $("#container").width());
+      $(".highcharts-legend").css({"transform": "translate(0px," + $("#container").height()*6/10 +"px)"});
+
+      $.each($(".highcharts-legend-item"), function(i, item) {
+        $(".highcharts-legend-item tspan").eq(i * 2 + 1).attr('dx', parseFloat($("#container").css('width')) * 4 / 5 - parseFloat($(".highcharts-legend-item tspan").eq(i * 2 + 1).css('width')) - parseFloat($(".highcharts-legend-item tspan").eq(i * 2).css('width')));
+      });
+    }
+
+
+    function mytitlePosition() {
+      return $('#container').height() * 0.23;
+    }
+  
+    function diameter() {
+        if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+            return $("#container").width() * 3 / 5;
+        } else {
+            return 230;
+        }
+    }
+  
+    function innerDiameter() {
+        if($("#container").width() * 3 / 5  < $("#container").height()/2) {
+            return $("#container").width() * 3 / 9;
+        } else {
+            return 120;
+        }
+    }
+
+
+
+    $(function() {
+      $(document).ready(function() {
+
+        $("#container").height($(document).height());
+        $("#container").width($(document).width());
+        // Build the chart
+        $('#container').highcharts({
+                                   
+          title: {
+            text: '本月账单<br>￥<a>273.5',
+            align: 'center',
+            y: mytitlePosition(),
+            dy: 30
+          },
+                                   
+       yAxis: [
+               
+               { // Secondary yAxis
+               top: $("#container").height() * 63.5 / 100,
+               // min: 0,
+               height: $("#container").height() * 31.5 / 100,
+               //                bottom: 100,
+               title: {
+               text: '',
+               style: {
+               color: '#4572A7'
+               }
+               }
+               
+               }
+               ],
+
+          tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+            pie: {
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                enabled: false
+              },
+              showInLegend: true,
+              point: {
+                events: {
+                  legendItemClick: function(e) {
+                    e.preventDefault();
+                  }
+                }
+              }
+            },
+
+            spline: {
+              width: 10,
+              height: 10,
+              depth: 10
+            },
+
+
+          },
+
+          legend: {
+            floating: true,
+            align: 'left',
+            x: -10, // = marginLeft - default spacingLeft
+            itemWidth: $("#container").width(),
+            verticalAlign: 'bottom',
+            //                padding: 20,
+            symbolHeight: 16,
+            symbolWidth: 16,
+            symbolRadius: 8,
+            verticalAlign: 'bottom',
+            backgroundColor: '#E2EAEA',
+            itemMarginBottom: 16,
+            itemStyle: {
+              lineHeight: '100px'
+            },
+            itemStyle: {
+              font: '12pt Trebuchet MS, Verdana, sans-serif',
+              color: '#A0A0A0'
+            }
+          },
+
+          series: [{                
+            type: 'pie',
+            options3d: {
+              enabled: false,
+              alpha: 45
+            },
+            colorByPoint: true,
+            center: ["50%", "15%"],
+            size: diameter(),
+            innerSize: innerDiameter(),
+            data: [
+                   ['物业费 <a>￥23.5', 23.5]
+            ]
+          }]
+        });
+      });
+
+
+    });
+  </script>
+</head>
+
+<body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
+  <script src="/../../highcharts.js"></script>
+  <div> <img src="/resources/icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 50px;" /></div>
+  <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
+  </div>
+
+</body>
+
+</html>

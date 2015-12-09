@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Highcharts Example</title>
+    <script type="text/javascript" src="jquery-1.9.0.js"></script>
+    <script type="text/javascript">
+      function plot(data, data3) {
+        var chart = $('#container').highcharts(),
+          inCome = data,
+          lenObj = inCome.length,
+          series1 = [],
+          series2 = [];
+
+        chart.series[0].setData(inCome, true);
+        chart.xAxis[1].setCategories(data3, true);
+      }
+
+      function mytitlePosition() {
+        return $('#container').height() * 0.38;
+      }
+
+
+      function diameter() {
+        if ($("#container").width() * 3 / 5 < $("#container").height() / 2) {
+          return $("#container").width() * 3 / 5;
+        } else {
+          return 230;
+        }
+      }
+
+      function innerDiameter() {
+        if ($("#container").width() * 3 / 5 < $("#container").height() / 2) {
+          return $("#container").width() * 3 / 9;
+        } else {
+          return 120;
+        }
+      }
+
+
+      $(function() {
+
+        $("#container").height($(document).height() * 98 / 100);
+        $("#container").width($(document).width() * 98 / 100);
+
+
+        $('#container').highcharts({
+
+          title: {
+            text: '报警总数<br>2015',
+            align: 'center',
+            y: mytitlePosition(),
+            x: 15,
+            dy: 30
+          },
+
+
+          yAxis: [
+
+            { // Primary yAxis
+              top: 50,
+              height: $("#container").height() / 2,
+              title: {
+                text: ''
+              },
+              min: 0
+            }, { // Secondary yAxis
+              top: $("#container").height() * 63.5 / 100,
+              // min: 0,
+              height: $("#container").height() * 31.5 / 100,
+              //                bottom: 100,
+              title: {
+                text: '',
+                style: {
+                  color: '#4572A7'
+                }
+              }
+
+            }
+          ],
+
+          tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+            pie: {
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                enabled: true
+              },
+              showInLegend: false,
+              point: {
+                events: {
+                  legendItemClick: function(e) {
+                    e.preventDefault();
+                  }
+                }
+              }
+            },
+
+            column: {
+              width: 10,
+              height: 10,
+              depth: 10,
+              showInLegend: false,
+              marker: {
+                enabled: false,
+                symbol: 'circle',
+                radius: 2,
+                states: {
+                  hover: {
+                    enabled: true
+                  }
+                }
+              }
+            }
+
+          },
+
+          series: [{ //柱状图
+              type: 'column',
+              name: 'Jane',
+              yAxis: 1,
+              //     xAxis: 1,
+              data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
+            },
+
+
+            { //饼
+              // xAxis: 0,
+              yAxis: 0,
+              type: 'pie',
+              options3d: {
+                enabled: false,
+                alpha: 45
+              },
+              align: 'top',
+              colorByPoint: true,
+              center: ["50%", "35%"],
+              size: diameter(),
+              innerSize: innerDiameter(),
+              data: [
+                ['红外报警 <a>20', 20],
+                ['煤气报警 <a>15', 15]
+              ]
+            }
+          ]
+        });
+      });
+
+    </script>
+  </head>
+
+  <body height="100%">
+    <script src="highcharts.js"></script>
+    <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
+  </body>
+
+</html>
