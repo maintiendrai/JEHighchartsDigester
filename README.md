@@ -1,7 +1,7 @@
 JEHighChartsDigester
 =============
 
-JEHighchartsDigester is a html5 chart highcharts framework for iOS and Android
+JEHighchartsDigester is a html5 chart highcharts utils for iOS and Android
 
 ## About Highcharts
 - [Demo](http://www.highcharts.com/demo)
