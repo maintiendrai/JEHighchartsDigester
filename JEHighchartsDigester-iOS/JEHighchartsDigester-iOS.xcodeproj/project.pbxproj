@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84228C6C1C17105F00BB83F2 /* combination-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 84228C5C1C17105F00BB83F2 /* combination-1.html */; };
-		84228C6D1C17105F00BB83F2 /* combination-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 84228C5D1C17105F00BB83F2 /* combination-2.html */; };
-		84228C6E1C17105F00BB83F2 /* donutLegend.html in Resources */ = {isa = PBXBuildFile; fileRef = 84228C5E1C17105F00BB83F2 /* donutLegend.html */; };
-		84228C6F1C17105F00BB83F2 /* icon_utility_payed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84228C601C17105F00BB83F2 /* icon_utility_payed.png */; };
-		84228C701C17105F00BB83F2 /* baseline.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C621C17105F00BB83F2 /* baseline.js */; };
-		84228C711C17105F00BB83F2 /* combination-1.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C631C17105F00BB83F2 /* combination-1.js */; };
-		84228C721C17105F00BB83F2 /* combination.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C641C17105F00BB83F2 /* combination.js */; };
-		84228C731C17105F00BB83F2 /* donut.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C651C17105F00BB83F2 /* donut.js */; };
-		84228C741C17105F00BB83F2 /* donutLegend.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C661C17105F00BB83F2 /* donutLegend.js */; };
-		84228C751C17105F00BB83F2 /* exporting.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C691C17105F00BB83F2 /* exporting.js */; };
-		84228C761C17105F00BB83F2 /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C6A1C17105F00BB83F2 /* highcharts.js */; };
-		84228C771C17105F00BB83F2 /* jquery-1.9.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 84228C6B1C17105F00BB83F2 /* jquery-1.9.0.js */; };
+		8451D83A1C17E7F600230D4D /* combination-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 8451D82A1C17E7F600230D4D /* combination-1.html */; };
+		8451D83B1C17E7F600230D4D /* combination-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8451D82B1C17E7F600230D4D /* combination-2.html */; };
+		8451D83C1C17E7F600230D4D /* donutLegend.html in Resources */ = {isa = PBXBuildFile; fileRef = 8451D82C1C17E7F600230D4D /* donutLegend.html */; };
+		8451D83D1C17E7F600230D4D /* icon_utility_payed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8451D82E1C17E7F600230D4D /* icon_utility_payed.png */; };
+		8451D83E1C17E7F600230D4D /* baseline.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8301C17E7F600230D4D /* baseline.js */; };
+		8451D83F1C17E7F600230D4D /* combination-1.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8311C17E7F600230D4D /* combination-1.js */; };
+		8451D8401C17E7F600230D4D /* combination.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8321C17E7F600230D4D /* combination.js */; };
+		8451D8411C17E7F600230D4D /* donut.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8331C17E7F600230D4D /* donut.js */; };
+		8451D8421C17E7F600230D4D /* donutLegend.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8341C17E7F600230D4D /* donutLegend.js */; };
+		8451D8431C17E7F600230D4D /* exporting.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8371C17E7F600230D4D /* exporting.js */; };
+		8451D8441C17E7F600230D4D /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8381C17E7F600230D4D /* highcharts.js */; };
+		8451D8451C17E7F600230D4D /* jquery-1.9.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8391C17E7F600230D4D /* jquery-1.9.0.js */; };
 		84898FBF1C06B22E00487F92 /* combination-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84898FBE1C06B22D00487F92 /* combination-1.json */; };
 		84901BA91BFB174200B4AD6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BA81BFB174200B4AD6A /* main.m */; };
 		84901BAC1BFB174200B4AD6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAB1BFB174200B4AD6A /* AppDelegate.m */; };
@@ -31,18 +31,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84228C5C1C17105F00BB83F2 /* combination-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-1.html"; sourceTree = "<group>"; };
-		84228C5D1C17105F00BB83F2 /* combination-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-2.html"; sourceTree = "<group>"; };
-		84228C5E1C17105F00BB83F2 /* donutLegend.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = donutLegend.html; sourceTree = "<group>"; };
-		84228C601C17105F00BB83F2 /* icon_utility_payed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_utility_payed.png; sourceTree = "<group>"; };
-		84228C621C17105F00BB83F2 /* baseline.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = baseline.js; sourceTree = "<group>"; };
-		84228C631C17105F00BB83F2 /* combination-1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "combination-1.js"; sourceTree = "<group>"; };
-		84228C641C17105F00BB83F2 /* combination.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = combination.js; sourceTree = "<group>"; };
-		84228C651C17105F00BB83F2 /* donut.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donut.js; sourceTree = "<group>"; };
-		84228C661C17105F00BB83F2 /* donutLegend.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donutLegend.js; sourceTree = "<group>"; };
-		84228C691C17105F00BB83F2 /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
-		84228C6A1C17105F00BB83F2 /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
-		84228C6B1C17105F00BB83F2 /* jquery-1.9.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.9.0.js"; sourceTree = "<group>"; };
+		8451D82A1C17E7F600230D4D /* combination-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-1.html"; sourceTree = "<group>"; };
+		8451D82B1C17E7F600230D4D /* combination-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "combination-2.html"; sourceTree = "<group>"; };
+		8451D82C1C17E7F600230D4D /* donutLegend.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = donutLegend.html; sourceTree = "<group>"; };
+		8451D82E1C17E7F600230D4D /* icon_utility_payed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_utility_payed.png; sourceTree = "<group>"; };
+		8451D8301C17E7F600230D4D /* baseline.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = baseline.js; sourceTree = "<group>"; };
+		8451D8311C17E7F600230D4D /* combination-1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "combination-1.js"; sourceTree = "<group>"; };
+		8451D8321C17E7F600230D4D /* combination.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = combination.js; sourceTree = "<group>"; };
+		8451D8331C17E7F600230D4D /* donut.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donut.js; sourceTree = "<group>"; };
+		8451D8341C17E7F600230D4D /* donutLegend.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = donutLegend.js; sourceTree = "<group>"; };
+		8451D8371C17E7F600230D4D /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
+		8451D8381C17E7F600230D4D /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
+		8451D8391C17E7F600230D4D /* jquery-1.9.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.9.0.js"; sourceTree = "<group>"; };
 		84898FBE1C06B22D00487F92 /* combination-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "combination-1.json"; sourceTree = "<group>"; };
 		84901BA41BFB174200B4AD6A /* JEHighchartsDigester-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JEHighchartsDigester-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84901BA81BFB174200B4AD6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,70 +69,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84228C591C17105F00BB83F2 /* JEHighchartsDigester */ = {
+		8451D8271C17E7F600230D4D /* JEHighchartsDigester */ = {
 			isa = PBXGroup;
 			children = (
-				84228C5A1C17105F00BB83F2 /* demo */,
-				84228C671C17105F00BB83F2 /* js */,
+				8451D8281C17E7F600230D4D /* demo */,
+				8451D8351C17E7F600230D4D /* js */,
 			);
 			name = JEHighchartsDigester;
 			path = ../../JEHighchartsDigester;
 			sourceTree = "<group>";
 		};
-		84228C5A1C17105F00BB83F2 /* demo */ = {
+		8451D8281C17E7F600230D4D /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				84228C5B1C17105F00BB83F2 /* html5 */,
-				84228C611C17105F00BB83F2 /* js */,
+				8451D8291C17E7F600230D4D /* html5 */,
+				8451D82F1C17E7F600230D4D /* js */,
 			);
 			path = demo;
 			sourceTree = "<group>";
 		};
-		84228C5B1C17105F00BB83F2 /* html5 */ = {
+		8451D8291C17E7F600230D4D /* html5 */ = {
 			isa = PBXGroup;
 			children = (
-				84228C5C1C17105F00BB83F2 /* combination-1.html */,
-				84228C5D1C17105F00BB83F2 /* combination-2.html */,
-				84228C5E1C17105F00BB83F2 /* donutLegend.html */,
-				84228C5F1C17105F00BB83F2 /* resources */,
+				8451D82A1C17E7F600230D4D /* combination-1.html */,
+				8451D82B1C17E7F600230D4D /* combination-2.html */,
+				8451D82C1C17E7F600230D4D /* donutLegend.html */,
+				8451D82D1C17E7F600230D4D /* resources */,
 			);
 			path = html5;
 			sourceTree = "<group>";
 		};
-		84228C5F1C17105F00BB83F2 /* resources */ = {
+		8451D82D1C17E7F600230D4D /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				84228C601C17105F00BB83F2 /* icon_utility_payed.png */,
+				8451D82E1C17E7F600230D4D /* icon_utility_payed.png */,
 			);
 			path = resources;
 			sourceTree = "<group>";
 		};
-		84228C611C17105F00BB83F2 /* js */ = {
+		8451D82F1C17E7F600230D4D /* js */ = {
 			isa = PBXGroup;
 			children = (
-				84228C621C17105F00BB83F2 /* baseline.js */,
-				84228C631C17105F00BB83F2 /* combination-1.js */,
-				84228C641C17105F00BB83F2 /* combination.js */,
-				84228C651C17105F00BB83F2 /* donut.js */,
-				84228C661C17105F00BB83F2 /* donutLegend.js */,
+				8451D8301C17E7F600230D4D /* baseline.js */,
+				8451D8311C17E7F600230D4D /* combination-1.js */,
+				8451D8321C17E7F600230D4D /* combination.js */,
+				8451D8331C17E7F600230D4D /* donut.js */,
+				8451D8341C17E7F600230D4D /* donutLegend.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
 		};
-		84228C671C17105F00BB83F2 /* js */ = {
+		8451D8351C17E7F600230D4D /* js */ = {
 			isa = PBXGroup;
 			children = (
-				84228C681C17105F00BB83F2 /* highcharts */,
-				84228C6B1C17105F00BB83F2 /* jquery-1.9.0.js */,
+				8451D8361C17E7F600230D4D /* highcharts */,
+				8451D8391C17E7F600230D4D /* jquery-1.9.0.js */,
 			);
 			path = js;
 			sourceTree = "<group>";
 		};
-		84228C681C17105F00BB83F2 /* highcharts */ = {
+		8451D8361C17E7F600230D4D /* highcharts */ = {
 			isa = PBXGroup;
 			children = (
-				84228C691C17105F00BB83F2 /* exporting.js */,
-				84228C6A1C17105F00BB83F2 /* highcharts.js */,
+				8451D8371C17E7F600230D4D /* exporting.js */,
+				8451D8381C17E7F600230D4D /* highcharts.js */,
 			);
 			path = highcharts;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 		84901BA61BFB174200B4AD6A /* JEHighchartsDigester-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				84228C591C17105F00BB83F2 /* JEHighchartsDigester */,
+				8451D8271C17E7F600230D4D /* JEHighchartsDigester */,
 				84901BAA1BFB174200B4AD6A /* AppDelegate.h */,
 				84901BAB1BFB174200B4AD6A /* AppDelegate.m */,
 				84901BAD1BFB174200B4AD6A /* ViewController.h */,
@@ -246,24 +246,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451D8401C17E7F600230D4D /* combination.js in Resources */,
+				8451D83F1C17E7F600230D4D /* combination-1.js in Resources */,
 				84901BB71BFB174200B4AD6A /* LaunchScreen.storyboard in Resources */,
 				84898FBF1C06B22E00487F92 /* combination-1.json in Resources */,
-				84228C741C17105F00BB83F2 /* donutLegend.js in Resources */,
-				84228C6D1C17105F00BB83F2 /* combination-2.html in Resources */,
+				8451D83E1C17E7F600230D4D /* baseline.js in Resources */,
 				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
-				84228C711C17105F00BB83F2 /* combination-1.js in Resources */,
+				8451D83D1C17E7F600230D4D /* icon_utility_payed.png in Resources */,
+				8451D8441C17E7F600230D4D /* highcharts.js in Resources */,
+				8451D8431C17E7F600230D4D /* exporting.js in Resources */,
+				8451D83A1C17E7F600230D4D /* combination-1.html in Resources */,
 				84901BB41BFB174200B4AD6A /* Assets.xcassets in Resources */,
-				84228C751C17105F00BB83F2 /* exporting.js in Resources */,
+				8451D8411C17E7F600230D4D /* donut.js in Resources */,
 				84901BB21BFB174200B4AD6A /* Main.storyboard in Resources */,
-				84228C6C1C17105F00BB83F2 /* combination-1.html in Resources */,
-				84228C6E1C17105F00BB83F2 /* donutLegend.html in Resources */,
-				84228C701C17105F00BB83F2 /* baseline.js in Resources */,
-				84228C731C17105F00BB83F2 /* donut.js in Resources */,
-				84228C771C17105F00BB83F2 /* jquery-1.9.0.js in Resources */,
 				84901BE31BFC1BB800B4AD6A /* xaxis.json in Resources */,
-				84228C721C17105F00BB83F2 /* combination.js in Resources */,
-				84228C6F1C17105F00BB83F2 /* icon_utility_payed.png in Resources */,
-				84228C761C17105F00BB83F2 /* highcharts.js in Resources */,
+				8451D83B1C17E7F600230D4D /* combination-2.html in Resources */,
+				8451D8421C17E7F600230D4D /* donutLegend.js in Resources */,
+				8451D83C1C17E7F600230D4D /* donutLegend.html in Resources */,
+				8451D8451C17E7F600230D4D /* jquery-1.9.0.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -159,7 +159,7 @@
 
 <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
   <script src="highcharts.js"></script>
-  <div> <img src="icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 50px;" /></div>
+  <div> <img src="/resource/icon_utility_payed.png" style="width:96px; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 50px;" /></div>
   <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
   </div>
 
