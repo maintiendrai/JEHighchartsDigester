@@ -44,7 +44,7 @@
 - (void)htmlDigester {
 
 //    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-1" ofType:@"html"];
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"combination-2" ofType:@"html"];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"JEHighchartsDigester.bundle/demo/html5/combination-2" ofType:@"html"];
     
     _htmlString  = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlFile];
