@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Highcharts Example</title>
+        <script type="text/javascript" src="jquery-1.9.0.js"></script>
+        <script type="text/javascript">
+            function greet(name) {
+                return 'Hello, ' + name;
+            }
+
+            function plot(data, data3) {
+                var chart = $('#container').highcharts(),
+                    inCome = data,
+                    lenObj = inCome.length,
+                    series1 = [],
+                    series2 = [];
+
+                chart.series[0].setData(inCome, true);
+                chart.xAxis[1].setCategories(data3, true);
+            }
+        
+
+            $(function() {
+              
+              $("#container").height($(document).height()-30);
+
+                $('#container').highcharts({
+                    xAxis: [{ // Primary xAxis
+                        title: {
+                            text: '报警总数<br>2015',
+
+                            style: {
+                                font: '12pt Trebuchet MS, Verdana, sans-serif',
+                                    "color": "#707070",
+                                    "fontWeight": "bold"
+                            },
+                            x: $("#container").width() / 2 - 40,
+                            y: $("#container").height() / 3 - 30,
+                        },
+                        width: 0,
+                        height: 0,
+                        min: 0
+                    }, {
+                        categories: [],
+                    }],
+                    yAxis: [
+
+                    { // Primary yAxis
+                        top: 50,
+                        height: $("#container").height() / 2,
+                        title: {
+                            text: ''
+                        },
+                        min: 0
+                    }, { // Secondary yAxis
+                        top: $("#container").height() / 2 + 100,
+                        // min: 0,
+                        height: $("#container").height() / 2 - 135,
+                        //                bottom: 100,
+                        // max: 100,
+                        title: {
+                            text: '',
+                            style: {
+                                color: '#4572A7'
+                            }
+                        }
+                        //   ,
+                        //   labels: {
+                        //       style: {
+                        //           color: '#4572A7'
+                        //       }
+                        //   },
+                        //   opposite: true
+                    }],
+
+                    title: {
+                        text: ''
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true
+                            },
+                            showInLegend: false,
+                            point: {
+                                events: {
+                                    legendItemClick: function(e) {
+                                        e.preventDefault();
+                                    }
+                                }
+                            }
+                        },
+
+                        column: {
+                            width: 10,
+                            height: 10,
+                            depth: 10,
+                            showInLegend: false,
+                            marker: {
+                                enabled: false,
+                                symbol: 'circle',
+                                radius: 2,
+                                states: {
+                                    hover: {
+                                        enabled: true
+                                    }
+                                }
+                            }
+                        }
+
+                    },
+
+                    series: [{ //柱状图
+                        type: 'column',
+                        name: 'Jane',
+                        //top: 400,
+                        //                                                        lineColor: '#666666',
+                        // cropThreshold: 100,
+                        yAxis: 1,
+                        xAxis: 1,
+                        data: []
+                    },
+
+
+                    { //饼
+                        xAxis: 0,
+                        yAxis: 0,
+                        type: 'pie',
+                        options3d: {
+                            enabled: false,
+                            alpha: 45
+                        },
+                        align: 'top',
+                        name: 'Brands',
+                        colorByPoint: true,
+                        center: ["50%", "35%"],
+                        size: 230,
+                        innerSize: 120,
+                        data: [{
+                            name: '红外报警  20',
+                            y: 56.33
+                        }, {
+                            name: '煤气报警  15',
+                            y: 24.03
+                        }]
+                    }]
+                });
+            });
+        </script>
+    </head>
+    
+    <body  height="100%">
+        <script src="highcharts.js"></script>
+        <div id="container"  height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
+    </body>
+
+</html>

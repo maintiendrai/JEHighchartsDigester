@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Highcharts Example</title>
+
+    <script type="text/javascript" src="file:///android_asset/jquery.min.js"></script>
+    <script type="text/javascript">
+        function plot(data,  data3) {
+        var chart = $('#container').highcharts(),
+        inCome = data,
+        lenObj = inCome.length,
+        series1 = [],
+        series2 = [];
+
+        chart.series[0].setData(inCome, true);
+        chart.xAxis[0].setCategories(data3,true);
+        }
+
+
+        $(function () {
+        $('#container').highcharts({
+        chart: {
+        type: 'bar'
+        },
+        title: {
+        text: 'Count Max'
+        },
+        subtitle: {
+        text: 'subtitle'
+        },
+        xAxis: {
+        categories: [],
+        title: {
+        text: null
+        }
+        },
+        yAxis: {
+        min: 0,
+        title: {
+        text: 'y axis',
+        align: 'high'
+        },
+        labels: {
+        overflow: 'justify'
+        }
+        },
+        tooltip: {
+        valueSuffix: ' millions'
+        },
+        plotOptions: {
+        bar: {
+        dataLabels: {
+        enabled: true
+        }
+        }
+        },
+        legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 100,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: '#FFFFFF',
+        shadow: true
+        },
+        credits: {
+        enabled: false
+        },
+       series : [{
+        name : 'SerieName',
+        data : []
+        }]
+        });
+        });
+
+    </script>
+</head>
+<body>
+<script src="file:///android_asset/highcharts.js"></script>
+<script src="file:///android_asset/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+</body>
+</html>
