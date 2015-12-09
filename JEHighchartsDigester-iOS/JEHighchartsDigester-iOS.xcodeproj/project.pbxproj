@@ -44,7 +44,7 @@
 		84228C6A1C17105F00BB83F2 /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highcharts.js; sourceTree = "<group>"; };
 		84228C6B1C17105F00BB83F2 /* jquery-1.9.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.9.0.js"; sourceTree = "<group>"; };
 		84898FBE1C06B22D00487F92 /* combination-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "combination-1.json"; sourceTree = "<group>"; };
-		84901BA41BFB174200B4AD6A /* JEHighchartsDigesterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JEHighchartsDigesterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84901BA41BFB174200B4AD6A /* JEHighchartsDigester-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JEHighchartsDigester-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84901BA81BFB174200B4AD6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84901BAA1BFB174200B4AD6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84901BAB1BFB174200B4AD6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		84901B9B1BFB174200B4AD6A = {
 			isa = PBXGroup;
 			children = (
-				84901BA61BFB174200B4AD6A /* JEHighchartsDigesterDemo */,
+				84901BA61BFB174200B4AD6A /* JEHighchartsDigester-iOS */,
 				84901BA51BFB174200B4AD6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,12 +148,12 @@
 		84901BA51BFB174200B4AD6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84901BA41BFB174200B4AD6A /* JEHighchartsDigesterDemo.app */,
+				84901BA41BFB174200B4AD6A /* JEHighchartsDigester-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84901BA61BFB174200B4AD6A /* JEHighchartsDigesterDemo */ = {
+		84901BA61BFB174200B4AD6A /* JEHighchartsDigester-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				84228C591C17105F00BB83F2 /* JEHighchartsDigester */,
@@ -168,7 +168,8 @@
 				84901BB81BFB174200B4AD6A /* Info.plist */,
 				84901BA71BFB174200B4AD6A /* Supporting Files */,
 			);
-			path = JEHighchartsDigesterDemo;
+			name = "JEHighchartsDigester-iOS";
+			path = "../../../JEHighchartsDigester/JEHighchartsDigester-iOS/JEHighchartsDigester-iOS";
 			sourceTree = "<group>";
 		};
 		84901BA71BFB174200B4AD6A /* Supporting Files */ = {
@@ -192,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84901BA31BFB174200B4AD6A /* JEHighchartsDigesterDemo */ = {
+		84901BA31BFB174200B4AD6A /* JEHighchartsDigester-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84901BBB1BFB174200B4AD6A /* Build configuration list for PBXNativeTarget "JEHighchartsDigesterDemo" */;
+			buildConfigurationList = 84901BBB1BFB174200B4AD6A /* Build configuration list for PBXNativeTarget "JEHighchartsDigester-iOS" */;
 			buildPhases = (
 				84901BA01BFB174200B4AD6A /* Sources */,
 				84901BA11BFB174200B4AD6A /* Frameworks */,
@@ -204,9 +205,9 @@
 			);
 			dependencies = (
 			);
-			name = JEHighchartsDigesterDemo;
+			name = "JEHighchartsDigester-iOS";
 			productName = JEHighchartsDigesterDemo;
-			productReference = 84901BA41BFB174200B4AD6A /* JEHighchartsDigesterDemo.app */;
+			productReference = 84901BA41BFB174200B4AD6A /* JEHighchartsDigester-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84901B9F1BFB174200B4AD6A /* Build configuration list for PBXProject "JEHighchartsDigesterDemo" */;
+			buildConfigurationList = 84901B9F1BFB174200B4AD6A /* Build configuration list for PBXProject "JEHighchartsDigester-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,7 +237,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84901BA31BFB174200B4AD6A /* JEHighchartsDigesterDemo */,
+				84901BA31BFB174200B4AD6A /* JEHighchartsDigester-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -386,11 +387,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JEHighchartsDigesterDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../../../JEHighchartsDigester/JEHighchartsDigester-iOS/JEHighchartsDigester-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.evideo.weiju;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "JEHighchartsDigester-iOS";
 			};
 			name = Debug;
 		};
@@ -398,18 +399,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JEHighchartsDigesterDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../../../JEHighchartsDigester/JEHighchartsDigester-iOS/JEHighchartsDigester-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.evideo.weiju;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "JEHighchartsDigester-iOS";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84901B9F1BFB174200B4AD6A /* Build configuration list for PBXProject "JEHighchartsDigesterDemo" */ = {
+		84901B9F1BFB174200B4AD6A /* Build configuration list for PBXProject "JEHighchartsDigester-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84901BB91BFB174200B4AD6A /* Debug */,
@@ -418,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84901BBB1BFB174200B4AD6A /* Build configuration list for PBXNativeTarget "JEHighchartsDigesterDemo" */ = {
+		84901BBB1BFB174200B4AD6A /* Build configuration list for PBXNativeTarget "JEHighchartsDigester-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84901BBC1BFB174200B4AD6A /* Debug */,

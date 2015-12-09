@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84901BA31BFB174200B4AD6A"
-               BuildableName = "JEHighchartsDigesterDemo.app"
-               BlueprintName = "JEHighchartsDigesterDemo"
-               ReferencedContainer = "container:JEHighchartsDigesterDemo.xcodeproj">
+               BuildableName = "JEHighchartsDigester-iOS.app"
+               BlueprintName = "JEHighchartsDigester-iOS"
+               ReferencedContainer = "container:JEHighchartsDigester-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84901BA31BFB174200B4AD6A"
-            BuildableName = "JEHighchartsDigesterDemo.app"
-            BlueprintName = "JEHighchartsDigesterDemo"
-            ReferencedContainer = "container:JEHighchartsDigesterDemo.xcodeproj">
+            BuildableName = "JEHighchartsDigester-iOS.app"
+            BlueprintName = "JEHighchartsDigester-iOS"
+            ReferencedContainer = "container:JEHighchartsDigester-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84901BA31BFB174200B4AD6A"
-            BuildableName = "JEHighchartsDigesterDemo.app"
-            BlueprintName = "JEHighchartsDigesterDemo"
-            ReferencedContainer = "container:JEHighchartsDigesterDemo.xcodeproj">
+            BuildableName = "JEHighchartsDigester-iOS.app"
+            BlueprintName = "JEHighchartsDigester-iOS"
+            ReferencedContainer = "container:JEHighchartsDigester-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84901BA31BFB174200B4AD6A"
-            BuildableName = "JEHighchartsDigesterDemo.app"
-            BlueprintName = "JEHighchartsDigesterDemo"
-            ReferencedContainer = "container:JEHighchartsDigesterDemo.xcodeproj">
+            BuildableName = "JEHighchartsDigester-iOS.app"
+            BlueprintName = "JEHighchartsDigester-iOS"
+            ReferencedContainer = "container:JEHighchartsDigester-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
