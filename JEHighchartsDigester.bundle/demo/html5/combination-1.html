@@ -6,15 +6,16 @@
             <title>Highcharts Example</title>
             <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
             <script type="text/javascript">
-                function plot(data, data3) {
+                function combinationPlotFill(columnData, pieData, columnX) {
                     var chart = $('#container').highcharts(),
-                    inCome = data,
+                    inCome = columnData,
                     lenObj = inCome.length,
                     series1 = [],
                     series2 = [];
                     
                     chart.series[0].setData(inCome, true);
-                    chart.xAxis[1].setCategories(data3, true);
+                    chart.series[1].setData(pieData, true);
+                    chart.xAxis[1].setCategories(columnX, true);
                 }
             
             function mytitlePosition() {
@@ -132,12 +133,11 @@
                                                   name: 'Jane',
                                                   yAxis: 1,
                                                   //     xAxis: 1,
-                                                  data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
+                                                  data: []
                                                   },
                                                   
                                                   
                                                   { //饼
-                                                  // xAxis: 0,
                                                   yAxis: 0,
                                                   type: 'pie',
                                                   options3d: {
@@ -150,10 +150,7 @@
                                                   center: [$("#container").width()/2-innerDiameter()/2, "15%"],
                                                   size: diameter(),
                                                   innerSize: innerDiameter(),
-                                                  data: [
-                                                         ['红外报警', 20],
-                                                         ['煤气报警', 15]
-                                                         ]
+                                                  data: []
                                                   }
                                                   ]
                                          });
