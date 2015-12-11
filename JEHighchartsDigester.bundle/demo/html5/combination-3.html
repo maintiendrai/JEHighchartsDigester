@@ -9,7 +9,7 @@
     <script type="text/javascript">
       function billPlotFill(billsdata, allbill, payed) {
 
-        var chart = $('#container').highcharts(),
+        var chart = $("#container").highcharts(),
           inCome = billsdata,
           lenObj = inCome.length,
           series1 = [],
@@ -46,8 +46,7 @@
 
           $("#container").height($(document).height());
           $("#container").width($(document).width());
-          // Build the chart
-          $('#container').highcharts({
+          $("#container").highcharts({
 
             title: {
               text: '本月账单<br>￥<a>273.5',
