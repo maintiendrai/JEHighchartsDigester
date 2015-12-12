@@ -6,6 +6,8 @@
             <title>Highcharts Example</title>
             <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
             <script type="text/javascript">
+                
+                
                 function combinationPlotFill(columnData, pieData, columnX) {
                     var chart = $('#container').highcharts(),
                     inCome = columnData,
@@ -63,6 +65,13 @@
                                          dy: 30
                                          },
                                          
+                                         xAxis: [{ // Primary xAxis
+                                                 min: 1,
+                                                 startOnTick: true,
+                                                 lineWidth: 1,
+                                                 offset: 0
+                                                 
+                                                 }],
                                          
                                          yAxis: [
                                                  
@@ -133,7 +142,7 @@
                                                   name: 'Jane',
                                                   yAxis: 1,
                                                   //     xAxis: 1,
-                                                  data: []
+                                                  data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
                                                   },
                                                   
                                                   
@@ -154,14 +163,18 @@
                                                   }
                                                   ]
                                          });
+              
+              $(".highcharts-axis path").attr('stroke-width', 0);
+              
               });
               
                 </script>
             </head>
     
-    <body height="100%">
+    <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
         <script src="../../js/highcharts/highcharts.js"></script>
-        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; "></div>
+        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
+        </div>
+        
     </body>
-    
 </html>
