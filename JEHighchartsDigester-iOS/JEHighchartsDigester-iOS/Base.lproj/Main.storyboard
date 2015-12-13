@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R2X-im-nkb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -15,32 +15,44 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-XW-ouD">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-XW-ouD">
+                                <rect key="frame" x="0.0" y="133" width="600" height="467"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2009.09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-hP-PbU">
+                                <rect key="frame" x="255" y="90" width="90" height="22"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.76078431372549016" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nR4-XW-ouD" secondAttribute="trailing" id="03e-pg-qrw"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="4ya-4p-jbH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR4-XW-ouD" secondAttribute="bottom" id="6Qe-iw-PGj"/>
+                            <constraint firstItem="J80-hP-PbU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="B4Z-Rb-gHK"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="J80-hP-PbU" secondAttribute="bottom" constant="21" id="Cwj-BH-p2a"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Fb2-zY-656"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="J0z-Cc-UZy"/>
+                            <constraint firstItem="J80-hP-PbU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTS-ym-m6T"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nys-e2-LW1"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="thQ-18-Qps"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4ya-4p-jbH"/>
                                 <exclude reference="Fb2-zY-656"/>
                                 <exclude reference="thQ-18-Qps"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="YRg-zF-acF"/>
                     <connections>
                         <outlet property="webView" destination="nR4-XW-ouD" id="Zch-pt-ESt"/>
                     </connections>
@@ -48,6 +60,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="302" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="55b-eR-ERR">
+            <objects>
+                <navigationController id="R2X-im-nkb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vFb-BG-rKd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GDb-Jk-5yB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z9r-ve-luS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="1034"/>
         </scene>
     </scenes>
 </document>
