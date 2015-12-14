@@ -54,7 +54,7 @@
                 var a = $("#container").width() * 7 / 10;
                 var b = $("#container").height() * 63.5 / 100;
                 if(a > b) {
-                    return ["45%", "5%"];
+                    return ["45%", "10%"];
                 }
                 return ["45%", "15%"];
             }
@@ -115,7 +115,12 @@
                                          cursor: 'pointer',
                                          dataLabels: {
                                          enabled: true,
-                                         distance: distance()
+                                         distance: distance(),
+                                         style: {
+                                         fontWeight: 'normal',
+                                         color: 'white',
+                                         textShadow: null
+                                         }
                                          },
                                          showInLegend: false,
                                          point: {

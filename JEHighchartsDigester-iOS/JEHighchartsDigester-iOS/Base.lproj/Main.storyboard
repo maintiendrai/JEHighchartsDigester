@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-XW-ouD">
-                                <rect key="frame" x="0.0" y="133" width="600" height="467"/>
+                                <rect key="frame" x="0.0" y="53" width="600" height="483"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2009.09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J80-hP-PbU">
-                                <rect key="frame" x="255" y="90" width="90" height="22"/>
+                                <rect key="frame" x="255" y="16" width="90" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.32549019607843138" green="0.76078431372549016" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,23 +34,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nR4-XW-ouD" secondAttribute="trailing" id="03e-pg-qrw"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="4ya-4p-jbH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR4-XW-ouD" secondAttribute="bottom" id="6Qe-iw-PGj"/>
-                            <constraint firstItem="J80-hP-PbU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="B4Z-Rb-gHK"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="J80-hP-PbU" secondAttribute="bottom" constant="21" id="Cwj-BH-p2a"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Fb2-zY-656"/>
-                            <constraint firstItem="J80-hP-PbU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTS-ym-m6T"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nys-e2-LW1"/>
-                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="thQ-18-Qps"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR4-XW-ouD" secondAttribute="bottom" id="HVd-fs-VvL"/>
+                            <constraint firstItem="J80-hP-PbU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="ObY-y2-inM"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VuF-Ou-sJs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nR4-XW-ouD" secondAttribute="trailing" constant="-20" id="WSn-WZ-fRi"/>
+                            <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="J80-hP-PbU" secondAttribute="bottom" constant="15" id="hlN-NY-HTe"/>
+                            <constraint firstItem="J80-hP-PbU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shu-PW-2p5"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4ya-4p-jbH"/>
-                                <exclude reference="Fb2-zY-656"/>
-                                <exclude reference="thQ-18-Qps"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="YRg-zF-acF"/>
                     <connections>
