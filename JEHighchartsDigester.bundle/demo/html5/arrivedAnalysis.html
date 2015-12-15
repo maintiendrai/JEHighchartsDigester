@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title>Highcharts Example</title>
+            <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
+            <script type="text/javascript">
+                
+                
+                function combinationPlotFill(columnData, pieData, columnX) {
+                    var chart = $('#container').highcharts(),
+                    inCome = columnData,
+                    lenObj = inCome.length,
+                    series1 = [],
+                    series2 = [];
+                    
+                    chart.series[0].setData(inCome, true);
+                    chart.series[1].setData(pieData, true);
+                    chart.xAxis[1].setCategories(columnX, true);
+                }
+            
+            function mytitlePosition() {
+                return $('#container').height() * 0.25;
+            }
+            function mytitlePositionX() {
+                return -$('#container').width() * 0.16;
+            }
+            
+            
+            function diameter() {
+                if ($("#container").width() < $("#container").height()) {
+                    var a = $("#container").width() * 5 / 10;
+                    var b = $("#container").height() * 63.5 / 100;
+                    if(a > b) {
+                        return b*0.9;
+                    }
+                    return $("#container").width() * 5 / 10;
+                } else {
+                    return $("#container").height() * 5 / 10;
+                }
+            }
+            
+            function innerDiameter() {
+                return diameter()/2;
+            }
+            
+            function distance() {
+                if ($(document).height() < $(document).width()) {
+                    return -25;
+                } else {
+                    return -25;
+                }
+            }
+            
+            function diaCenter() {
+                var a = $("#container").width() * 7 / 10;
+                var b = $("#container").height() * 63.5 / 100;
+                if(a > b) {
+                    return ["20%", "10%"];
+                }
+                return ["20%", "15%"];
+            }
+            
+            $(function() {
+              
+              $("#container").height($(document).height()*98/100);
+              $("#container").width($(document).width()*98/100);
+              
+              
+              $('#container').highcharts({
+                                         
+                                         title: {
+                                         text: '开锁总数<br>100',
+                                         align: 'center',
+                                         y: mytitlePosition(),
+                                         x: mytitlePositionX(),
+                                         dy: 30
+                                         },
+                                         
+                                         xAxis: [{ // Primary xAxis
+                                                 min: 1,
+                                                 startOnTick: true,
+                                                 lineWidth: 1,
+                                                 offset: 0
+                                                 
+                                                 }],
+                                         
+                                         yAxis: [
+                                                 
+                                                 { // Primary yAxis
+                                                 top: 0,
+                                                 title: {
+                                                 text: ''
+                                                 },
+                                                 min: 0
+                                                 }, { // Secondary yAxis
+                                                 top: $("#container").height() * 63.5 / 100,
+                                                 // min: 0,
+                                                 height: $("#container").height() * 29 / 100,
+                                                 //                bottom: 100,
+                                                 title: {
+                                                 text: '',
+                                                 style: {
+                                                 color: '#4572A7'
+                                                 }
+                                                 }
+                                                 
+                                                 }
+                                                 ],
+                                         
+                                         tooltip: {
+                                         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                         },
+                                         plotOptions: {
+                                         pie: {
+                                         allowPointSelect: true,
+                                         cursor: 'pointer',
+                                         dataLabels: {
+                                         enabled: true,
+                                         format: '{point.y}次',
+                                         distance: distance(),
+                                         style: {
+                                         fontWeight: 'normal',
+                                         color: 'white',
+                                         textShadow: null
+                                         }
+                                         },
+                                         showInLegend: true,
+                                         point: {
+                                         events: {
+                                         legendItemClick: function(e) {
+                                         e.preventDefault();
+                                         }
+                                         }
+                                         }
+                                         },
+                                         
+                                         
+                                         
+                                         
+
+                                         
+                                         column: {
+                                         width: 10,
+                                         height: 10,
+                                         depth: 10,
+                                         showInLegend: false,
+                                         marker: {
+                                         enabled: false,
+                                         symbol: 'circle',
+                                         radius: 2,
+                                         states: {
+                                         hover: {
+                                         enabled: true
+                                         }
+                                         }
+                                         }
+                                         }
+                                         
+                                         },
+                                         
+                                         
+                                         legend: {
+                                         layout: 'vertical',
+                                         symbolHeight: 8,
+                                         symbolWidth: 8,
+                                         symbolRadius: 4,
+                                         itemMarginBottom: 6,
+                                         verticalAlign: 'center',
+                                         align:'right',
+                                         y: 50,
+                                         
+                                         itemStyle: {
+                                         fontWeight: 'normal',
+                                         fontSize: "10px",
+                                         color:"#B0B1B1"
+                                         }
+                                         
+                                         },
+                                         
+                                         series: [{ //柱状图
+                                                  type: 'column',
+                                                  name: 'Jane',
+                                                  yAxis: 1,
+                                                  //     xAxis: 1,
+                                                  data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
+                                                  },
+                                                  
+                                                  
+                                                  { //饼
+                                                  yAxis: 0,
+                                                  type: 'pie',
+                                                  options3d: {
+                                                  enabled: false,
+                                                  alpha: 45
+                                                  },
+                                                  name:"占比",
+                                                  //    align: 'top',
+                                                  colorByPoint: true,
+                                                  center: diaCenter(),
+                                                  size: diameter(),
+                                                  innerSize: innerDiameter(),
+                                                  data: []
+                                                  }
+                                                  ]
+                                         });
+              
+              $(".highcharts-axis path").attr('stroke-width', 0);
+              
+              $(".highcharts-title tspan").eq(0).css('font-size', '10px');
+              $(".highcharts-title tspan").eq(1).css('font-size', '20px');
+              $(".highcharts-title tspan").eq(2).css('font-size', '30px');
+              $(".highcharts-title tspan").eq(1).attr('dy', 30);
+              
+              });
+              
+                </script>
+            </head>
+    
+    <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
+        <script src="../../js/highcharts/highcharts.js"></script>
+        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
+        </div>
+        
+    </body>
+</html>
