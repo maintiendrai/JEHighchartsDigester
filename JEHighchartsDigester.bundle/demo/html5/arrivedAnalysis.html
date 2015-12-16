@@ -21,10 +21,10 @@
                 }
             
             function mytitlePosition() {
-                return $('#container').height() * 0.25;
+                return $('#container').height() * 0.22;
             }
             function mytitlePositionX() {
-                return -$('#container').width() * 0.16;
+                return -$('#container').width() * 0.2;
             }
             
             
@@ -62,6 +62,7 @@
                 return ["20%", "15%"];
             }
             
+            
             $(function() {
               
               $("#container").height($(document).height()*98/100);
@@ -74,7 +75,6 @@
                                          text: '开锁总数<br>100',
                                          align: 'center',
                                          y: mytitlePosition(),
-                                         x: mytitlePositionX(),
                                          dy: 30
                                          },
                                          
@@ -169,7 +169,7 @@
                                          itemMarginBottom: 6,
                                          verticalAlign: 'center',
                                          align:'right',
-                                         y: 50,
+                                         y: $('#container').height()/6,
                                          
                                          itemStyle: {
                                          fontWeight: 'normal',
