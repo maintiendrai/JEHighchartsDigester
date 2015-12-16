@@ -7,6 +7,18 @@
 
   <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
   <script type="text/javascript">
+      
+      
+      function visitedPlotFilled(acceptData, acceptCount, missedData, missedCount, allCount) {
+          var chart = $('#container').highcharts(),
+          inCome = acceptData,
+          lenObj = inCome.length,
+          series1 = [],
+          series2 = [];
+          chart.series[0].setData(inCome, true);
+          chart.series[1].setData(missedData, true);
+      }
+      
     function plot(data,  data3) {
       var chart = $('#container').highcharts(),
         inCome = data,
@@ -102,6 +114,7 @@ $(function () {
                              plotOptions: {
                              column: {
                              stacking: 'normal',
+                             pointStart: 1,
                              dataLabels: {
                              enabled: false,
                              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
@@ -113,10 +126,10 @@ $(function () {
                              },
                              series: [{
                                              name: '已接',
-                                             data: [5, 3, 4, 7, 2, 5, 3, 4, 7, 2,5, 3, 4, 7, 2,5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2]
+                                             data: []
                                              }, {
                                              name: '未接',
-                                             data: [2, 2, 3, 2, 1, 5, 3, 4, 7, 2,5, 3, 4, 7, 2,5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2]
+                                             data: []
                                              }]
                              
                              

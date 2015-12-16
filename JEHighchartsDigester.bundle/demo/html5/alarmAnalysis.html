@@ -8,34 +8,33 @@
             <script type="text/javascript">
                 
                 
-                function arrivedPlotFilled(arrivedData, arrivedCount) {
+                function combinationPlotFill(columnData, pieData, columnX) {
                     var chart = $('#container').highcharts(),
-                    inCome = arrivedData,
+                    inCome = columnData,
                     lenObj = inCome.length,
                     series1 = [],
                     series2 = [];
+                    
                     chart.series[0].setData(inCome, true);
+                    chart.series[1].setData(pieData, true);
+                    chart.xAxis[1].setCategories(columnX, true);
                 }
-
             
             function mytitlePosition() {
-                return $('#container').height() * 0.22;
-            }
-            function mytitlePositionX() {
-                return -$('#container').width() * 0.2;
+                return $('#container').height() * 0.25;
             }
             
             
             function diameter() {
                 if ($("#container").width() < $("#container").height()) {
-                    var a = $("#container").width() * 5 / 10;
+                    var a = $("#container").width() * 7 / 10;
                     var b = $("#container").height() * 63.5 / 100;
                     if(a > b) {
                         return b*0.9;
                     }
-                    return $("#container").width() * 5 / 10;
+                    return $("#container").width() * 7 / 10;
                 } else {
-                    return $("#container").height() * 5 / 10;
+                    return $("#container").height() * 7 / 10;
                 }
             }
             
@@ -55,11 +54,10 @@
                 var a = $("#container").width() * 7 / 10;
                 var b = $("#container").height() * 63.5 / 100;
                 if(a > b) {
-                    return ["20%", "10%"];
+                    return ["45%", "10%"];
                 }
-                return ["20%", "15%"];
+                return ["45%", "15%"];
             }
-            
             
             $(function() {
               
@@ -70,9 +68,10 @@
               $('#container').highcharts({
                                          
                                          title: {
-                                         text: '开锁总数<br>100',
+                                         text: '报警总数<br>2015',
                                          align: 'center',
                                          y: mytitlePosition(),
+                                         x: 0,
                                          dy: 30
                                          },
                                          
@@ -116,7 +115,6 @@
                                          cursor: 'pointer',
                                          dataLabels: {
                                          enabled: true,
-                                         format: '{point.y}次',
                                          distance: distance(),
                                          style: {
                                          fontWeight: 'normal',
@@ -124,7 +122,7 @@
                                          textShadow: null
                                          }
                                          },
-                                         showInLegend: true,
+                                         showInLegend: false,
                                          point: {
                                          events: {
                                          legendItemClick: function(e) {
@@ -134,17 +132,11 @@
                                          }
                                          },
                                          
-                                         
-                                         
-                                         
-
-                                         
                                          column: {
                                          width: 10,
                                          height: 10,
                                          depth: 10,
                                          showInLegend: false,
-                                         pointStart: 1,
                                          marker: {
                                          enabled: false,
                                          symbol: 'circle',
@@ -159,41 +151,35 @@
                                          
                                          },
                                          
-                                         
-                                         legend: {
-                                         layout: 'vertical',
-                                         symbolHeight: 8,
-                                         symbolWidth: 8,
-                                         symbolRadius: 4,
-                                         itemMarginBottom: 6,
-                                         verticalAlign: 'center',
-                                         align:'right',
-                                         y: $('#container').height()/6,
-                                         
-                                         itemStyle: {
-                                         fontWeight: 'normal',
-                                         fontSize: "10px",
-                                         color:"#B0B1B1"
-                                         }
-                                         
-                                         },
-                                         
                                          series: [{ //柱状图
                                                   type: 'column',
                                                   name: 'Jane',
                                                   yAxis: 1,
-                                                  xAxis: 0,
-                                                  data: []
+                                                  //     xAxis: 1,
+                                                  data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
+                                                  },
+                                                  
+                                                  
+                                                  { //饼
+                                                  yAxis: 0,
+                                                  type: 'pie',
+                                                  options3d: {
+                                                  enabled: false,
+                                                  alpha: 45
+                                                  },
+                                                  name:"占比",
+                                                  //    align: 'top',
+                                                  colorByPoint: true,
+                                                  center: diaCenter(),
+                                                  size: diameter(),
+                                                  innerSize: innerDiameter(),
+                                                  data: [['红外报警 <a>20', 20],
+                                                         ['煤气报警 <a>15', 15]]
                                                   }
                                                   ]
                                          });
               
               $(".highcharts-axis path").attr('stroke-width', 0);
-              
-              $(".highcharts-title tspan").eq(0).css('font-size', '10px');
-              $(".highcharts-title tspan").eq(1).css('font-size', '20px');
-              $(".highcharts-title tspan").eq(2).css('font-size', '30px');
-              $(".highcharts-title tspan").eq(1).attr('dy', 30);
               
               });
               
