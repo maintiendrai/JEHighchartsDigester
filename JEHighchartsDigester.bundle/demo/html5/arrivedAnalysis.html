@@ -19,29 +19,9 @@
 
             
             function mytitlePosition() {
-                return $('#container').height() * 0.22;
-            }
-            function mytitlePositionX() {
-                return -$('#container').width() * 0.2;
+                return $('#container').height() * 0.15;
             }
             
-            
-            function diameter() {
-                if ($("#container").width() < $("#container").height()) {
-                    var a = $("#container").width() * 5 / 10;
-                    var b = $("#container").height() * 63.5 / 100;
-                    if(a > b) {
-                        return b*0.9;
-                    }
-                    return $("#container").width() * 5 / 10;
-                } else {
-                    return $("#container").height() * 5 / 10;
-                }
-            }
-            
-            function innerDiameter() {
-                return diameter()/2;
-            }
             
             function distance() {
                 if ($(document).height() < $(document).width()) {
@@ -93,9 +73,9 @@
                                                  },
                                                  min: 0
                                                  }, { // Secondary yAxis
-                                                 top: $("#container").height() * 63.5 / 100,
+                                                 top: $("#container").height() * 50 / 100,
                                                  // min: 0,
-                                                 height: $("#container").height() * 29 / 100,
+                                                 height: $("#container").height() * 40 / 100,
                                                  //                bottom: 100,
                                                  title: {
                                                  text: '',
