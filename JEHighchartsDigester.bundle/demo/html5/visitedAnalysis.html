@@ -17,6 +17,11 @@
           series2 = [];
           chart.series[0].setData(inCome, true);
           chart.series[1].setData(missedData, true);
+          
+          $(".highcharts-title tspan").eq(1).text(allCount);
+          $('#accept tspan').eq(0).text(acceptCount);
+          $('#missed tspan').eq(0).text(missedCount);
+          
       }
       
     function plot(data,  data3) {
@@ -145,8 +150,8 @@ $(function () {
 
 <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
   <script src="../../js/highcharts/highcharts.js"></script>
-  <div><text x="100" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 40%;padding-left: 20%;" y="190"><tspan>已接<br>53次</tspan></text></div>
-  <div><text x="100" text-anchor="middle" class="highcharts-title" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 40%;padding-right: 15%;" y="190"><tspan>未接<br>53次</tspan></text></div>
+  <div><text x="100" text-anchor="middle" id="accept" zIndex="4" style="color:#333333;font-size:18px;fill:#333333; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 40%;padding-left: 20%;" y="190"><tspan>已接<br>53次</tspan></text></div>
+  <div><text x="100" text-anchor="middle" id="missed" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 40%;padding-right: 15%;" y="190"><tspan>未接<br>53次</tspan></text></div>
   <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
       
   </div>
