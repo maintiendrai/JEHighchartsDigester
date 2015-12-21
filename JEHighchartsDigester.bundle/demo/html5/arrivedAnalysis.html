@@ -4,20 +4,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <title>Highcharts Example</title>
+            <style type="text/css">
+
+              #container {
+                  background: url(resources/viewcontroller_background.png) repeat;
+              }
+
+            </style>
             <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
             <script type="text/javascript">
                 
                 
-                function arrivedPlotFilled(arrivedData, arrivedCount) {
-                    var chart = $('#container').highcharts(),
-                    inCome = arrivedData,
-                    lenObj = inCome.length,
-                    series1 = [],
-                    series2 = [];
-                    chart.series[0].setData(inCome, true);
-                    
-                    $(".highcharts-title tspan").eq(1).text(arrivedCount);
+            function arrivedPlotFilled(arrivedData, arrivedCount) {
+                var chart = $('#container').highcharts(),
+                inCome = arrivedData,
+                lenObj = inCome.length,
+                series1 = [],
+                series2 = [];
+                chart.series[0].setData(inCome, true);
+                if(arrivedCount === 0) {
+                    $(".highcharts-axis path").attr('stroke-width', 1);
+                } else {
+                    $(".highcharts-axis path").attr('stroke-width', 0);
                 }
+                $(".highcharts-title tspan").eq(0).text(arrivedCount);
+                $(".highcharts-title tspan").eq(0).css(color, "#1DB2A1");
+
+            }
+
+                
 
             
             function mytitlePosition() {
@@ -45,18 +60,24 @@
             
             $(function() {
               
-              $("#container").height($(document).height()*98/100);
-              $("#container").width($(document).width()*98/100);
+              $("#container").height($(document).height()*99.99/100);
+              $("#container").width($(document).width()*99.99/100);
               
               
               $('#container').highcharts({
                                          
                                          title: {
-                                         text: '开锁总数<br>100',
+                                         text: '100<br>刷卡总数',
                                          align: 'center',
                                          y: mytitlePosition(),
                                          dy: 30
                                          },
+
+                                         chart: {
+             backgroundColor: 'transparent'
+            },
+
+                                         colors: ['#63b8fa', '#fcd653', '#fcab53', '#fe6869', '#41d9a1', '#4aa4e9', '#f4bd37', '#f79224', '#b048f2', '#f94c4d', '#14d18c'],
                                          
                                          xAxis: [{ // Primary xAxis
                                                  min: 1,
@@ -71,7 +92,10 @@
                                                  { // Primary yAxis
                                                  top: 0,
                                                  title: {
-                                                 text: ''
+                                                 text: '',
+                                                 style: {
+                                                 color: '#1DB2A1'
+                                                 }
                                                  },
                                                  min: 0
                                                  }, { // Secondary yAxis
@@ -82,7 +106,7 @@
                                                  title: {
                                                  text: '',
                                                  style: {
-                                                 color: '#4572A7'
+                                                 color: '#1DB2A1'
                                                  }
                                                  }
                                                  
@@ -125,7 +149,7 @@
                                          width: 10,
                                          height: 10,
                                          depth: 10,
-                                         showInLegend: false,
+                                         showInLegend: true,
                                          pointStart: 1,
                                          marker: {
                                          enabled: false,
@@ -165,7 +189,7 @@
                                                   name: 'Jane',
                                                   yAxis: 1,
                                                   xAxis: 0,
-                                                  data: []
+                                                  data: [0, 0, 0, 0, 0, 0]
                                                   }
                                                   ]
                                          });
@@ -173,10 +197,15 @@
               $(".highcharts-axis path").attr('stroke-width', 0);
               
               $(".highcharts-title tspan").eq(0).css('font-size', '10px');
-              $(".highcharts-title tspan").eq(1).css('font-size', '20px');
+              $(".highcharts-title tspan").eq(0).css('font-size', '75px');
               $(".highcharts-title tspan").eq(2).css('font-size', '30px');
-              $(".highcharts-title tspan").eq(1).attr('dy', 30);
+              $(".highcharts-title tspan").eq(1).attr('dy', 40);
               
+              $(".highcharts-title").css('color', "#1DB2A1");
+              $(".highcharts-title").css('fill', "#1DB2A1");
+              $(".highcharts-title").css('font-family', "HelveticaNeue-Light");
+              $(".highcharts-title tspan").eq(1).css('fill', '#c1c1c1');
+              $(".highcharts-title tspan").eq(1).css('font-size', '15px');
               });
               
                 </script>

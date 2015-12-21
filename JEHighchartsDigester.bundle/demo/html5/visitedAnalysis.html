@@ -4,7 +4,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Highcharts Example</title>
+  <style type="text/css">
 
+  #container {
+      background: url(resources/viewcontroller_background.png) repeat;
+  }
+
+  </style>
   <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
   <script type="text/javascript">
       
@@ -18,9 +24,15 @@
           chart.series[0].setData(inCome, true);
           chart.series[1].setData(missedData, true);
           
-          $(".highcharts-title tspan").eq(1).text(allCount);
+          $(".highcharts-title tspan").eq(0).text(allCount);
           $('#accept tspan').eq(0).text(acceptCount);
           $('#missed tspan').eq(0).text(missedCount);
+
+          if(allCount === 0) {
+              $(".highcharts-axis path").attr('stroke-width', 1);
+          } else {
+              $(".highcharts-axis path").attr('stroke-width', 0);
+          }
           
       }
       
@@ -78,7 +90,7 @@ $(function () {
                              
                              
                              title: {
-                             text: '通话次数<br><a>273次',
+                             text: '273<br>访客总数',
                              align: 'center',
                              y: mytitlePosition(),
                              dy: 30
@@ -86,9 +98,12 @@ $(function () {
 
                              
                              chart: {
-                             type: 'column'
+                             type: 'column',
+                             backgroundColor: 'transparent'
                              },
                              
+                             colors: ['#63b8fa', '#fcd653', '#fcab53', '#fe6869', '#41d9a1', '#4aa4e9', '#f4bd37', '#f79224', '#b048f2', '#f94c4d', '#14d18c'],
+
                              xAxis: {
                           //   categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
                              },
@@ -120,6 +135,7 @@ $(function () {
                              column: {
                              stacking: 'normal',
                              pointStart: 1,
+                             showInLegend: false,
                              dataLabels: {
                              enabled: false,
                              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
@@ -141,7 +157,28 @@ $(function () {
                              });
   
             $(".highcharts-axis path").attr('stroke-width', 0);
-  
+            $(".highcharts-title tspan").eq(0).css('font-size', '75px');
+            $(".highcharts-title tspan").eq(2).css('font-size', '30px');
+            $(".highcharts-title tspan").eq(1).attr('dy', 40);
+            
+            $(".highcharts-title").css('color', "#1DB2A1");
+            $(".highcharts-title").css('fill', "#1DB2A1");
+            $(".highcharts-title").css('font-family', "HelveticaNeue-Light");
+            $(".highcharts-title tspan").eq(1).css('fill', '#c1c1c1');
+            $(".highcharts-title tspan").eq(1).css('font-size', '15px');
+
+            $("#accept tspan").eq(1).css('color', "#c1c1c1");
+            $("#accept tspan").eq(0).css('color', "#8a8a8a");
+            $("#accept tspan").eq(0).css('font-size', '40px');
+            $("#accept tspan").eq(0).css('font-family', "HelveticaNeue-Light");
+ 
+            $("#missed tspan").eq(1).css('color', "#c1c1c1");
+            $("#missed tspan").eq(0).css('color', "#8a8a8a");
+            $("#missed tspan").eq(0).css('font-size', '40px');
+            $("#missed tspan").eq(0).css('font-family', "HelveticaNeue-Light");
+
+
+
   });
   </script>
 </head>
@@ -150,8 +187,8 @@ $(function () {
 
 <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
   <script src="../../js/highcharts/highcharts.js"></script>
-  <div><text x="100" text-anchor="middle" id="accept" zIndex="4" style="color:#333333;font-size:18px;fill:#333333; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 40%;padding-left: 20%;" y="190"><tspan>已接<br>53次</tspan></text></div>
-  <div><text x="100" text-anchor="middle" id="missed" zIndex="4" style="color:#333333;font-size:18px;fill:#333333;height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 40%;padding-right: 15%;" y="190"><tspan>未接<br>53次</tspan></text></div>
+  <div><text x="100" id="accept" zIndex="4" style="text-align: center; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 40%;padding-left: 20%;" y="190"><tspan  text-anchor="middle">53</tspan><br><tspan text-anchor="middle">已接来电</tspan></text></div>
+  <div><text x="100" id="missed" zIndex="4" style="text-align: center; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 40%;padding-right: 15%;" y="190"><tspan text-anchor="middle">53</tspan><br><tspan text-anchor="middle">未接来电</tspan></text></div>
   <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
       
   </div>
