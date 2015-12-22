@@ -15,7 +15,7 @@
             <script type="text/javascript">
                 
                 
-                function combinationPlotFilled(columnData, pieData, allCount) {
+                function combinationPlotFilled(columnData, pieData, allCount, month) {
                     var chart = $('#container').highcharts(),
                     inCome = columnData,
                     lenObj = inCome.length,
@@ -24,7 +24,8 @@
                     
                     chart.series[0].setData(inCome, true);
                     chart.series[1].setData(pieData, true);
-                 //   chart.xAxis[1].setCategories(columnX, true);
+                    chart.xAxis[0].setCategories(month, true);
+                 $(".highcharts-series rect").attr('stroke-width', 0);
 
                      if(allCount === 0) {
                         $(".highcharts-axis path").attr('stroke-width', 1);
@@ -33,6 +34,7 @@
                     }
 
                      $(".highcharts-title tspan").eq(2).text(allCount);
+                     
                 }
 
 
@@ -97,7 +99,7 @@
              backgroundColor: 'transparent'
             },
                                          
-                                         colors: ['#63b8fa', '#fcd653', '#fcab53', '#fe6869', '#41d9a1', '#4aa4e9', '#f4bd37', '#f79224', '#b048f2', '#f94c4d', '#14d18c'],
+                                         colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
 
                                          xAxis: [{ // Primary xAxis
                                                  min: 1,
@@ -161,6 +163,7 @@
                                          height: 10,
                                          depth: 10,
                                          showInLegend: false,
+                                         borderWidth:0,
                                          marker: {
                                          enabled: false,
                                          symbol: 'circle',
@@ -179,6 +182,7 @@
                                                   type: 'column',
                                                   name: 'Jane',
                                                   yAxis: 1,
+                                                  stroke-width:0,
                                                   //     xAxis: 1,
                                                   data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
                                                   },
@@ -204,6 +208,7 @@
                                          });
               
               $(".highcharts-axis path").attr('stroke-width', 0);
+              //$(".highcharts-series rect").attr('stroke-width', 0);
               
               });
               

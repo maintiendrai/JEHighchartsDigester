@@ -15,7 +15,7 @@
   <script type="text/javascript">
       
       
-      function visitedPlotFilled(acceptData, acceptCount, missedData, missedCount, allCount) {
+      function visitedPlotFilled(acceptData, acceptCount, missedData, missedCount, allCount, month) {
           var chart = $('#container').highcharts(),
           inCome = acceptData,
           lenObj = inCome.length,
@@ -25,6 +25,9 @@
           chart.series[1].setData(missedData, true);
           
           $(".highcharts-title tspan").eq(0).text(allCount);
+          
+          chart.xAxis[0].setCategories(month, true);
+          
           $('#accept tspan').eq(0).text(acceptCount);
           $('#missed tspan').eq(0).text(missedCount);
 
@@ -102,7 +105,7 @@ $(function () {
                              backgroundColor: 'transparent'
                              },
                              
-                             colors: ['#63b8fa', '#fcd653', '#fcab53', '#fe6869', '#41d9a1', '#4aa4e9', '#f4bd37', '#f79224', '#b048f2', '#f94c4d', '#14d18c'],
+                             colors: ['#63b8fa', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
 
                              xAxis: {
                           //   categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
@@ -135,6 +138,7 @@ $(function () {
                              column: {
                              stacking: 'normal',
                              pointStart: 1,
+                             borderWidth:0,
                              showInLegend: false,
                              dataLabels: {
                              enabled: false,
@@ -157,6 +161,8 @@ $(function () {
                              });
   
             $(".highcharts-axis path").attr('stroke-width', 0);
+            $(".highcharts-series rect").attr('stroke-width', 0);
+  
             $(".highcharts-title tspan").eq(0).css('font-size', '75px');
             $(".highcharts-title tspan").eq(2).css('font-size', '30px');
             $(".highcharts-title tspan").eq(1).attr('dy', 40);
