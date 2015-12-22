@@ -39,7 +39,7 @@
 
 
       function mytitlePosition() {
-        return $("#container").height() * 0.5 * 0.7;
+        return $("#container").height() * 0.5 * 0.65;
       }
 
       function distance() {
@@ -69,7 +69,7 @@
              backgroundColor: 'transparent'
             },
 
-            colors: ['#63b8fa', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
+            colors: ['#dddddd', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
 
             yAxis: [
 
@@ -91,6 +91,7 @@
               pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
+                borderWidth:0,
                 dataLabels: {
                   enabled: true,
                   distance: distance(),
@@ -145,16 +146,19 @@
               size: "80%",
               innerSize: '50%',
               data: [
-               
+               ['物业费', 23.5]
               ]
             }]
           });
 
 
-          $(".highcharts-title tspan").eq(0).css('font-size', '10px');
+          $(".highcharts-title tspan").eq(0).css('font-size', '12px');
+          $(".highcharts-title tspan").eq(0).css('fill', "#999999");
+          $(".highcharts-title tspan").eq(1).css('fill', "#252525");
+          $(".highcharts-title tspan").eq(2).css('fill', "#252525");
           $(".highcharts-title tspan").eq(1).css('font-size', '20px');
           $(".highcharts-title tspan").eq(2).css('font-size', '30px');
-          $(".highcharts-title tspan").eq(1).attr('dy', 30);
+          $(".highcharts-title tspan").eq(1).attr('dy', 50);
           $("#pay").hide();
 
         });
@@ -168,7 +172,7 @@
 
   <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
     <script src="../../js/highcharts/highcharts.js"></script>
-    <div> <img id="pay" style="width:96px; height:73px; float: right; position:absolute;z-index:1;right: 0; padding-top: 0px;" /></div>
+    <div> <img id="pay" style="width:96px; height:73px; float: right; position:absolute;z-index:1;right: 0; padding-top: 0px; padding-right: 20px;" /></div>
     <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
     </div>
 

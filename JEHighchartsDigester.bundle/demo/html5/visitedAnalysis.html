@@ -105,11 +105,13 @@ $(function () {
                              backgroundColor: 'transparent'
                              },
                              
-                             colors: ['#63b8fa', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
+                             colors: ['#63b8fa', '#fcab52', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
 
                              xAxis: {
-                          //   categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                                min: 0,
+                                labels:{step:7}
                              },
+                             
                              yAxis: { // Secondary yAxis
                                      top: $("#container").height() * 63.5 / 100,
                                      // min: 0,
@@ -193,8 +195,8 @@ $(function () {
 
 <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
   <script src="../../js/highcharts/highcharts.js"></script>
-  <div><text x="100" id="accept" zIndex="4" style="text-align: center; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 40%;padding-left: 20%;" y="190"><tspan  text-anchor="middle">53</tspan><br><tspan text-anchor="middle">已接来电</tspan></text></div>
-  <div><text x="100" id="missed" zIndex="4" style="text-align: center; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 40%;padding-right: 15%;" y="190"><tspan text-anchor="middle">53</tspan><br><tspan text-anchor="middle">未接来电</tspan></text></div>
+  <div><text x="100" id="accept" zIndex="4" style="text-align: center; height:73px; float: left; position:absolute;z-index:1; left: 0; padding-top: 35%;padding-left: 20%;" y="190"><tspan  text-anchor="middle">53</tspan><br><tspan text-anchor="middle" style="padding-bottom:5px;border-bottom: 2px solid #63b8fa;">已接来电</tspan></text></div>
+  <div><text x="100" id="missed" zIndex="4" style="text-align: center; height:73px; float: right; position:absolute;z-index:1; right: 0; padding-top: 35%;padding-right: 15%;" y="190"><tspan text-anchor="middle">53</tspan><br><tspan text-anchor="middle" style="padding-bottom:5px;border-bottom: 2px solid #fcab52;">未接来电</tspan></text></div>
   <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
       
   </div>

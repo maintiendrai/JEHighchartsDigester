@@ -25,7 +25,6 @@
                     chart.series[0].setData(inCome, true);
                     chart.series[1].setData(pieData, true);
                     chart.xAxis[0].setCategories(month, true);
-                 $(".highcharts-series rect").attr('stroke-width', 0);
 
                      if(allCount === 0) {
                         $(".highcharts-axis path").attr('stroke-width', 1);
@@ -41,7 +40,7 @@
 
             
             function mytitlePosition() {
-                return $('#container').height() * 0.25;
+                return $('#container').height() * 0.2;
             }
             
             
@@ -88,7 +87,7 @@
               $('#container').highcharts({
                                          
                                          title: {
-                                         text: '报警总数<br>2015',
+                                         text: '报警总数<br>99',
                                          align: 'center',
                                          y: mytitlePosition(),
                                          x: 0,
@@ -102,11 +101,11 @@
                                          colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
 
                                          xAxis: [{ // Primary xAxis
-                                                 min: 1,
+                                                 min: 0,
                                                  startOnTick: true,
                                                  lineWidth: 1,
-                                                 offset: 0
-                                                 
+                                                 offset: 0,
+                                                 labels:{step:7}
                                                  }],
                                          
                                          yAxis: [
@@ -164,6 +163,7 @@
                                          depth: 10,
                                          showInLegend: false,
                                          borderWidth:0,
+                                         color: '#63b8fa',
                                          marker: {
                                          enabled: false,
                                          symbol: 'circle',
@@ -182,7 +182,6 @@
                                                   type: 'column',
                                                   name: 'Jane',
                                                   yAxis: 1,
-                                                  stroke-width:0,
                                                   //     xAxis: 1,
                                                   data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
                                                   },
@@ -196,18 +195,26 @@
                                                   alpha: 45
                                                   },
                                                   name:"占比",
-                                                  //    align: 'top',
+                                                  borderWidth:0,
                                                   colorByPoint: true,
                                                   center: diaCenter(),
                                                   size: diameter(),
                                                   innerSize: innerDiameter(),
-                                                  data: [['红外报警 <a>20', 20],
-                                                         ['煤气报警 <a>15', 15]]
+                                                  data: [['红外报警', 20],
+                                                         ['煤气报警', 15]]
                                                   }
                                                   ]
                                          });
               
               $(".highcharts-axis path").attr('stroke-width', 0);
+              $(".highcharts-title tspan").eq(0).css('fill', "#999999");
+              $(".highcharts-title tspan").eq(1).css('fill', "#252525");
+              $(".highcharts-title tspan").eq(2).css('fill', "#252525");
+              
+              $(".highcharts-title tspan").eq(0).css('font-size', '12px');
+              $(".highcharts-title tspan").eq(1).css('font-size', '35px');
+           //   $(".highcharts-title tspan").eq(2).css('font-size', '30px');
+              $(".highcharts-title tspan").eq(1).attr('dy', 40);
               //$(".highcharts-series rect").attr('stroke-width', 0);
               
               });
