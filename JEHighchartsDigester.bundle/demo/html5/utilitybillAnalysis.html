@@ -21,8 +21,8 @@
           lenObj = inCome.length,
           series1 = [],
           series2 = [];
-        chart.series[1].setData(inCome, true);
-        chart.series[0].hide();
+        chart.series[0].setData(inCome, true);
+        chart.series[1].hide();
 
 
         $("#pay").show();
@@ -33,6 +33,7 @@
           $("#pay").attr("src", "resources/icon_utility_unpay.png");
         }
 
+        $(".highcharts-title tspan").eq(2).css('font-size', '30px');
 
         $(".highcharts-title tspan").eq(1).text("￥");
         $(".highcharts-title tspan").eq(2).text(allbill);
@@ -140,7 +141,7 @@
 
             series: [{
               type: 'pie',
-              enableMouseTracking: false,
+             // enableMouseTracking: false,
               options3d: {
                 enabled: false,
                 alpha: 45
@@ -153,9 +154,10 @@
               data: [
             //   ['物业费', 23.5]
               ]
-                     },{
+                     },
+                     {
                      type: 'pie',
-                  //   enableMouseTracking: false,
+                     enableMouseTracking: false,
                      options3d: {
                      enabled: false,
                      alpha: 45
@@ -177,21 +179,21 @@
           $(".highcharts-title tspan").eq(1).css('fill', "#252525");
           $(".highcharts-title tspan").eq(2).css('fill', "#252525");
           $(".highcharts-title tspan").eq(1).css('font-size', '20px');
-          $(".highcharts-title tspan").eq(2).css('font-size', '30px');
+          $(".highcharts-title tspan").eq(2).css('font-size', '20px');
           $(".highcharts-title tspan").eq(1).attr('dy', 50);
                           
                           
                           
-          $("#container").highcharts().series[0].setData([['1', 1]], true);
+          $("#container").highcharts().series[1].setData([['1', 1]], true);
           $("#pay").hide();
           $(".highcharts-title tspan").eq(1).text(" ");
           $(".highcharts-data-labels").hide();
           $(".highcharts-legend-item").hide();
                        
           $(".highcharts-series path").eq(0).css('fill', "#dddddd");
-          pick($("#container").highcharts().options.enableMouseTracking, true);
-          chart.series[0].show();
-          chart.series[1].hide();
+        //  pick($("#container").highcharts().options.enableMouseTracking, true);
+          chart.series[1].show();
+          chart.series[0].hide();
         });
 
 
