@@ -21,7 +21,8 @@
           lenObj = inCome.length,
           series1 = [],
           series2 = [];
-        chart.series[0].setData(inCome, true);
+        chart.series[1].setData(inCome, true);
+        chart.series[0].hide();
 
 
         $("#pay").show();
@@ -33,7 +34,10 @@
         }
 
 
+        $(".highcharts-title tspan").eq(1).text("￥");
         $(".highcharts-title tspan").eq(2).text(allbill);
+        
+        
 
       }
 
@@ -69,7 +73,7 @@
              backgroundColor: 'transparent'
             },
 
-            colors: ['#dddddd', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
+            colors: ['#63b8fa', '#ffc444', '#fb8800', '#fe6869', '#41d9a1', '#4aa4e9', '#ffb244', '#fb7600', '#b048f2', '#f94c4d', '#14d18c'],
 
             yAxis: [
 
@@ -136,6 +140,7 @@
 
             series: [{
               type: 'pie',
+              enableMouseTracking: false,
               options3d: {
                 enabled: false,
                 alpha: 45
@@ -146,9 +151,24 @@
               size: "80%",
               innerSize: '50%',
               data: [
-               ['物业费', 23.5]
+            //   ['物业费', 23.5]
               ]
-            }]
+                     },{
+                     type: 'pie',
+                  //   enableMouseTracking: false,
+                     options3d: {
+                     enabled: false,
+                     alpha: 45
+                     },
+                     name:"占比",
+                     colorByPoint: true,
+                     center: ["50%", "35%"],
+                     size: "80%",
+                     innerSize: '50%',
+                     data: [
+                            //   ['物业费', 23.5]
+                            ]
+                     }]
           });
 
 
@@ -159,8 +179,19 @@
           $(".highcharts-title tspan").eq(1).css('font-size', '20px');
           $(".highcharts-title tspan").eq(2).css('font-size', '30px');
           $(".highcharts-title tspan").eq(1).attr('dy', 50);
+                          
+                          
+                          
+          $("#container").highcharts().series[0].setData([['1', 1]], true);
           $("#pay").hide();
-
+          $(".highcharts-title tspan").eq(1).text(" ");
+          $(".highcharts-data-labels").hide();
+          $(".highcharts-legend-item").hide();
+                       
+          $(".highcharts-series path").eq(0).css('fill', "#dddddd");
+          pick($("#container").highcharts().options.enableMouseTracking, true);
+          chart.series[0].show();
+          chart.series[1].hide();
         });
 
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8451D8471C17E8EA00230D4D /* JEHighchartsDigester.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8451D8461C17E8EA00230D4D /* JEHighchartsDigester.bundle */; };
+		845A460C1C2A6AB200700203 /* viewcontroller_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 845A460B1C2A6AB200700203 /* viewcontroller_background.png */; };
 		84898FBF1C06B22E00487F92 /* combination-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 84898FBE1C06B22D00487F92 /* combination-1.json */; };
 		84901BA91BFB174200B4AD6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BA81BFB174200B4AD6A /* main.m */; };
 		84901BAC1BFB174200B4AD6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84901BAB1BFB174200B4AD6A /* AppDelegate.m */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		8451D8461C17E8EA00230D4D /* JEHighchartsDigester.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = JEHighchartsDigester.bundle; path = ../../JEHighchartsDigester.bundle; sourceTree = "<group>"; };
+		845A460B1C2A6AB200700203 /* viewcontroller_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewcontroller_background.png; sourceTree = "<group>"; };
 		84898FBE1C06B22D00487F92 /* combination-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "combination-1.json"; sourceTree = "<group>"; };
 		84901BA41BFB174200B4AD6A /* JEHighchartsDigester-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JEHighchartsDigester-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84901BA81BFB174200B4AD6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		84901BCD1BFB276800B4AD6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				845A460B1C2A6AB200700203 /* viewcontroller_background.png */,
 				84901BCE1BFB276800B4AD6A /* data.json */,
 				84901BE21BFC1BB800B4AD6A /* xaxis.json */,
 				84898FBE1C06B22D00487F92 /* combination-1.json */,
@@ -162,6 +165,7 @@
 				84901BCF1BFB276800B4AD6A /* data.json in Resources */,
 				84901BB41BFB174200B4AD6A /* Assets.xcassets in Resources */,
 				84901BB21BFB174200B4AD6A /* Main.storyboard in Resources */,
+				845A460C1C2A6AB200700203 /* viewcontroller_background.png in Resources */,
 				84901BE31BFC1BB800B4AD6A /* xaxis.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
