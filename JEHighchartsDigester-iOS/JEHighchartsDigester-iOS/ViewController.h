@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
+@interface UIImage (Extension)
++ (UIImage*)imageWithColor:(UIColor* )color;
+@end
+
 @interface ViewController : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWebView* webView;

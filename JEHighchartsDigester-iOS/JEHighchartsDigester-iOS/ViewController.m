@@ -9,6 +9,27 @@
 #import "ViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
+
+#define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define RGB(R, G, B) RGBA(R, G, B, 1)
+
+
+
+@implementation UIImage (Extension)
+
++ (UIImage*)imageWithColor:(UIColor* )color {
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [theImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeStretch];
+}
+
+
+@end
 @interface ViewController () {
     NSString* _htmlString;
 }
@@ -22,15 +43,21 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     UIImageView* imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [imageView setImage:[[UIImage imageNamed:@"viewcontroller_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeTile]];
+    
+    [imageView setImage:[[UIImage imageWithColor:RGB(235, 235, 235)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeTile]];
     imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    imageView.backgroundColor = RGB(235, 235, 235);
     
     [self.view insertSubview:imageView atIndex:0];
     
+    
+    [self.webView setBackgroundColor:[UIColor clearColor]];
+    [self.webView setOpaque:NO];
+    
     self.navigationController.navigationBar.translucent = NO;
     [(UIScrollView *)[[self.webView subviews] objectAtIndex:0] setBounces:NO];
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:RGB(235, 235, 235)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:RGB(235, 235, 235)]];
     
     [self htmlDigester];
 }
@@ -51,7 +78,6 @@
     
     
     [self.webView loadHTMLString:_htmlString baseURL:baseURL];
-    [self.webView setBackgroundColor:[UIColor blueColor]];
     self.webView.delegate = self;
     
 }
@@ -83,7 +109,7 @@
 //    [self.webView stringByEvaluatingJavaScriptFromString:@"arrivedPlotFilled([5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2, 5, 3, 4, 7, 2], 33, [\"6月1日\"])"];
     
     
-//    [self.webView stringByEvaluatingJavaScriptFromString:@"visitedPlotFilled([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 15, 3, 0, 0, 0, 0],26,[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 6, 5, 0, 0, 1, 169, 27, 0, 0, 0, 0],215,241,[\"11月1日\"])"];
+//    [self.webView stringByEvaluatingJavaScriptFromString:@"visitedPlotFilled([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],26,[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],215,0,[\"11月1日\"])"];
 }
 
 
