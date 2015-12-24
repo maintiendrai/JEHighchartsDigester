@@ -32,6 +32,9 @@
                         $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
                     } else {
                         $("#nodata").hide();
+                        $(".highcharts-yaxis-labels").show();
+                        $(".highcharts-grid").show();
+                        $(".highcharts-axis path").attr('stroke', '#D8D8D8');
                         $(".highcharts-axis path").attr('stroke-width', 0);
                     }
                     $(".highcharts-title tspan").eq(0).text(arrivedCount);
@@ -74,7 +77,7 @@
               $('#container').highcharts({
                                          
                                          title: {
-                                         text: '100<br>刷卡总数',
+                                         text: '0<br>刷卡总数',
                                          align: 'center',
                                          y: mytitlePosition(),
                                          dy: 30
@@ -199,7 +202,7 @@
                                                   name: 'Jane',
                                                   yAxis: 1,
                                                   xAxis: 0,
-                                                  data: [5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 34, 13, 56, 46, 66, 34, 62, 34, 13, 56, 5, 35, 5, 12, 15, 20, 46, 66, 34, 62, 11]
+                                                  data: []
                                                   }
                                                   ]
                                          });

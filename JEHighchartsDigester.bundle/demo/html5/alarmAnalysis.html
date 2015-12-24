@@ -35,6 +35,9 @@
                         $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
                     } else {
                         $("#nodata").hide();
+                        $(".highcharts-yaxis-labels").show();
+                        $(".highcharts-grid").show();
+                        $(".highcharts-axis path").attr('stroke', '#D8D8D8');
                         $(".highcharts-axis path").attr('stroke-width', 0);
                     }
 
@@ -93,7 +96,7 @@
               $('#container').highcharts({
                                          
                                          title: {
-                                         text: '报警总数<br>99',
+                                         text: '报警总数<br>0',
                                          align: 'center',
                                          y: mytitlePosition(),
                                          x: 0,

@@ -41,6 +41,9 @@
               $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
           } else {
               $("#nodata").hide();
+              $(".highcharts-yaxis-labels").show();
+              $(".highcharts-grid").show();
+              $(".highcharts-axis path").attr('stroke', '#D8D8D8');
               $(".highcharts-axis path").attr('stroke-width', 0);
           }
           
@@ -101,7 +104,7 @@ $(function () {
                              
                              
                              title: {
-                             text: '273<br>访客总数',
+                             text: '0<br>访客总数',
                              align: 'center',
                              y: mytitlePosition(),
                              dy: 30
