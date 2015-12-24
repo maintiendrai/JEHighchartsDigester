@@ -7,7 +7,7 @@
             <style type="text/css">
 
               #container {
-                  background: url(resources/viewcontroller_background.png) repeat;
+                  background:  #ebebeb;
               }
 
             </style>
@@ -27,8 +27,14 @@
                     chart.xAxis[0].setCategories(month, true);
 
                      if(allCount === 0) {
+                        $("#nodata").show();
+                        $(".highcharts-grid").hide();
+                        $(".highcharts-yaxis-labels").hide();
                         $(".highcharts-axis path").attr('stroke-width', 1);
+                        $(".highcharts-axis path").attr('stroke', '#ebebeb');
+                        $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
                     } else {
+                        $("#nodata").hide();
                         $(".highcharts-axis path").attr('stroke-width', 0);
                     }
 
@@ -224,6 +230,7 @@
     
     <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
         <script src="../../js/highcharts/highcharts.js"></script>
+        <div><text x="100" id="nodata" zIndex="4" style="text-align: center; position:absolute;z-index:1; padding-top: 100%; width:100%; color:#b8b8b8; font-size:20px;">无数据</text></div>
         <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
         </div>
         
