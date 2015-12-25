@@ -56,6 +56,11 @@
       }
 
 
+
+function pWidth() {
+    return $("#container").width()*0.7;
+}
+
       $(function() {
         $(document).ready(function() {
 
@@ -149,7 +154,7 @@
               name:"占比",
               colorByPoint: true,
               center: ["50%", "35%"],
-              size: "80%",
+              size: pWidth(),
               innerSize: '50%',
               data: [
             //   ['物业费', 23.5]
@@ -165,7 +170,7 @@
                      name:"占比",
                      colorByPoint: true,
                      center: ["50%", "35%"],
-                     size: "80%",
+                     size: pWidth(),
                      innerSize: '50%',
                      data: [
                             //   ['物业费', 23.5]
