@@ -1,240 +1,284 @@
 <!DOCTYPE HTML>
 <html>
-    
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <title>Highcharts Example</title>
-            <style type="text/css">
 
-              #container {
-                  background:  #ebebeb;
-              }
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Highcharts Example</title>
+    <style type="text/css">
+      #container {
+        background: #ebebeb;
+      },
+      #chart-A {
+        background: #ebebeb;
+      }
 
-            </style>
-            <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
-            <script type="text/javascript">
-                
-                
-                function combinationPlotFilled(columnData, pieData, allCount, month) {
-                    var chart = $('#container').highcharts(),
-                    inCome = columnData,
-                    lenObj = inCome.length,
-                    series1 = [],
-                    series2 = [];
+    </style>
+    <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
+    <script type="text/javascript">
+      function combinationPlotFilled(columnData, pieData, allCount, month) {
                     
-                    chart.series[0].setData(inCome, true);
-                    chart.series[1].setData(pieData, true);
-                    chart.xAxis[0].setCategories(month, true);
+        var pieChart = $('#chart-A').highcharts(),
+          inCome = columnData,
+          lenObj = inCome.length,
+          
+          series1 = [],
+          series2 = [];
+          
+          pieChart.series[0].setData(pieData, true);
+          
+        var chart = $('#container').highcharts(),
+          inCome = columnData,
+          lenObj = inCome.length,
+          
+          series1 = [],
+          series2 = [];
 
-                     if(allCount === 0) {
-                        $("#nodata").show();
-                        $(".highcharts-grid").hide();
-                        $(".highcharts-yaxis-labels").hide();
-                        $(".highcharts-axis path").attr('stroke-width', 1);
-                        $(".highcharts-axis path").attr('stroke', '#ebebeb');
-                        $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
-                    } else {
-                        $("#nodata").hide();
-                        $(".highcharts-yaxis-labels").show();
-                        $(".highcharts-grid").show();
-                        $(".highcharts-axis path").attr('stroke', '#D8D8D8');
-                        $(".highcharts-axis path").attr('stroke-width', 0);
-                    }
+        chart.series[0].setData(inCome, true);
+        chart.xAxis[0].setCategories(month, true);
 
-                     $(".highcharts-title tspan").eq(2).text(allCount);
-                     
-                }
+        if (allCount === 0) {
+          $("#nodata").show();
+          $(".highcharts-grid").hide();
+          $(".highcharts-yaxis-labels").hide();
+          $(".highcharts-axis path").attr('stroke-width', 1);
+          $(".highcharts-axis path").attr('stroke', '#ebebeb');
+          $(".highcharts-axis path").last().attr('stroke', '#D8D8D8');
+          pieChart.series[1].show();
+          pieChart.series[0].hide();
+        } else {
+          $(".highcharts-yaxis-labels").show();
+          $(".highcharts-grid").show();
+          $(".highcharts-axis path").attr('stroke', '#D8D8D8');
+          $(".highcharts-axis path").attr('stroke-width', 0);
+          pieChart.series[0].show();
+          pieChart.series[1].hide();
+          $("#nodata").hide();
+        }
+
+        $(".highcharts-title tspan").eq(1).text(allCount);
+
+      }
 
 
 
-            
-            function mytitlePosition() {
-                return $('#container').height() * 0.2;
-            }
-            
-            
-            function diameter() {
-                if ($("#container").width() < $("#container").height()) {
-                    var a = $("#container").width() * 7 / 10;
-                    var b = $("#container").height() * 63.5 / 100;
-                    if(a > b) {
-                        return b*0.9;
-                    }
-                    return $("#container").width() * 7 / 10;
-                } else {
-                    return $("#container").height() * 7 / 10;
-                }
-            }
-            
-            function innerDiameter() {
-                return diameter()/2;
-            }
-            
-            function distance() {
-                if ($(document).height() < $(document).width()) {
-                    return -25;
-                } else {
-                    return -25;
-                }
-            }
-            
-            function diaCenter() {
-                var a = $("#container").width() * 7 / 10;
-                var b = $("#container").height() * 63.5 / 100;
-                if(a > b) {
-                    return ["45%", "10%"];
-                }
-                return ["45%", "15%"];
-            }
-            
-            $(function() {
-              
-              $("#container").height($(document).height()*99.99/100);
-              $("#container").width($(document).width()*99.99/100);
-              
-              
-              $('#container').highcharts({
-                                         
-                                         title: {
-                                         text: '报警总数<br>0',
-                                         align: 'center',
-                                         y: mytitlePosition(),
-                                         x: 0,
-                                         dy: 30
-                                         },
 
-                                         chart: {
-             backgroundColor: 'transparent'
+      function mytitlePosition() {
+        return $("#chart-A").height() * 0.3;
+      }
+
+      function diameter() {
+        return $("#chart-A").width() * 0.6;
+      }
+
+      function innerDiameter() {
+        return diameter() / 2;
+      }
+
+      function distance() {
+        if ($(document).height() < $(document).width()) {
+          return -25;
+        } else {
+          return -25;
+        }
+      }
+
+      function diaCenter() {
+        return ["50%", "20%"];
+      }
+
+      $(function() {
+
+        $("#chart-A").height($(document).height() * 65 / 100);
+        $("#container").height($(document).height() * 35 / 100);
+        $("#container").width($(document).width() * 100 / 100);
+
+        $("#chart-A").highcharts({
+          chart: {
+            type: 'pie', // Chart type (i.e. 'bar', 'column', 'spline' etc)
+            backgroundColor: 'transparent'
+          },
+          title: {
+            text: '报警总数<br>0',
+            align: 'center',
+            y: mytitlePosition(),
+            x: 0,
+            dy: 30
+          },
+          colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
+          xAxis: {
+            // Categories for the charts
+          },
+          yAxis: { // Primary yAxis
+            top: 0,
+            chart: 1,
+            x: 0,
+            y: 0,
+            title: {
+              text: ''
             },
-                                         
-                                         colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
+            min: 0
+          },
+          tooltip: {
+            shared: true // If you have multiple series then all points in each category will show up on one tooltip
+          },
+          plotOptions: {
+            pie: {
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                enabled: true,
+                distance: distance(),
+                style: {
+                  fontWeight: 'normal',
+                  color: 'white',
+                  textShadow: null
+                }
+              },
+              showInLegend: false
+            }
 
-                                         xAxis: [{ // Primary xAxis
-                                                 min: 0,
-                                                 startOnTick: true,
-                                                 lineWidth: 1,
-                                                 offset: 0,
-                                                 labels:{step:7}
-                                                 }],
-                                         
-                                         yAxis: [
-                                                 
-                                                 { // Primary yAxis
-                                                 top: 0,
-                                                 title: {
-                                                 text: ''
-                                                 },
-                                                 min: 0
-                                                 }, { // Secondary yAxis
-                                                 top: $("#container").height() * 63.5 / 100,
-                                                 // min: 0,
-                                                 height: $("#container").height() * 29 / 100,
-                                                 //                bottom: 100,
-                                                 title: {
-                                                 text: '',
-                                                 style: {
-                                                 color: '#4572A7'
-                                                 }
-                                                 }
-                                                 
-                                                 }
-                                                 ],
-                                         
-                                         tooltip: {
-                                         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                                         },
-                                         plotOptions: {
-                                         pie: {
-                                         allowPointSelect: true,
-                                         cursor: 'pointer',
-                                         dataLabels: {
-                                         enabled: true,
-                                         distance: distance(),
-                                         style: {
-                                         fontWeight: 'normal',
-                                         color: 'white',
-                                         textShadow: null
-                                         }
-                                         },
-                                         showInLegend: false,
-                                         point: {
-                                         events: {
-                                         legendItemClick: function(e) {
-                                         e.preventDefault();
-                                         }
-                                         }
-                                         }
-                                         },
-                                         
-                                         column: {
-                                         width: 10,
-                                         height: 10,
-                                         depth: 10,
-                                         showInLegend: false,
-                                         borderWidth:0,
-                                         color: '#63b8fa',
-                                         marker: {
-                                         enabled: false,
-                                         symbol: 'circle',
-                                         radius: 2,
-                                         states: {
-                                         hover: {
-                                         enabled: true
-                                         }
-                                         }
-                                         }
-                                         }
-                                         
-                                         },
-                                         
-                                         series: [{ //柱状图
-                                                  type: 'column',
-                                                  name: '次数',
-                                                  yAxis: 1,
-                                                  //     xAxis: 1,
-                                                  data: []
-                                                  },
-                                                  
-                                                  
-                                                  { //饼
-                                                  yAxis: 0,
-                                                  type: 'pie',
-                                                  options3d: {
-                                                  enabled: false,
-                                                  alpha: 45
-                                                  },
-                                                  name:"占比",
-                                                  borderWidth:0,
-                                                  colorByPoint: true,
-                                                  center: diaCenter(),
-                                                  size: diameter(),
-                                                  innerSize: innerDiameter(),
-                                                  data: []
-                                                  }
-                                                  ]
-                                         });
-              
-              $(".highcharts-axis path").attr('stroke-width', 0);
-              $(".highcharts-title tspan").eq(0).css('fill', "#999999");
-              $(".highcharts-title tspan").eq(1).css('fill', "#252525");
-              $(".highcharts-title tspan").eq(2).css('fill', "#252525");
-              
-              $(".highcharts-title tspan").eq(0).css('font-size', '12px');
-              $(".highcharts-title tspan").eq(1).css('font-size', '35px');
-           //   $(".highcharts-title tspan").eq(2).css('font-size', '30px');
-              $(".highcharts-title tspan").eq(1).attr('dy', 40);
-              //$(".highcharts-series rect").attr('stroke-width', 0);
-              
-              });
-              
-                </script>
-            </head>
-    
-    <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
-        <script src="../../js/highcharts/highcharts.js"></script>
-        <div><text x="100" id="nodata" zIndex="4" style="text-align: center; position:absolute;z-index:1; padding-top: 100%; width:100%; color:#b8b8b8; font-size:20px;">无数据</text></div>
-        <div id="container" height="100% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
-        </div>
+          },
+          series: [{
+            yAxis: 0,
+            options3d: {
+              enabled: false,
+              alpha: 45
+            },
+            name: "占比",
+            position: {
+              marginLeft: 0,
+            },
+
+            borderWidth: 0,
+            colorByPoint: true,
+            center: diaCenter(),
+            size: diameter(),
+            innerSize: innerDiameter(),
+            data: [
+              ['红外报警', 20],
+              ['煤气报警', 15]
+            ]
+            },{
+            enableMouseTracking: false,
+            yAxis: 0,
+            options3d: {
+            enabled: false,
+            alpha: 45
+            },
+            name: "占比",
+            position: {
+            marginLeft: 0,
+            },
+
+            borderWidth: 0,
+            colorByPoint: true,
+            center: diaCenter(),
+            size: diameter(),
+            innerSize: innerDiameter(),
+            data: [
+                  ]
+            }]
+                                 
+            
+        });
+
+
+        $('#container').highcharts({
+
+          title: {
+            text: '',
+            x: 0,
+            dy: 30
+          },
+
+          chart: {
+            backgroundColor: 'transparent'
+          },
+
+          colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
+
+          xAxis: [{ // Primary xAxis
+            min: 0,
+            startOnTick: true,
+            lineWidth: 1,
+            offset: 0,
+            labels: {
+              step: 7
+            }
+          }],
+
+          yAxis: [{
+            // min: 0,
+            title: {
+              text: '',
+              style: {
+                color: '#4572A7'
+              }
+            }
+
+          }],
+
+          tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+          },
+          plotOptions: {
+            column: {
+              width: 10,
+              height: 10,
+              depth: 10,
+              showInLegend: false,
+              borderWidth: 0,
+              color: '#63b8fa',
+              marker: {
+                enabled: false,
+                symbol: 'circle',
+                radius: 2,
+                states: {
+                  hover: {
+                    enabled: true
+                  }
+                }
+              }
+            }
+
+          },
+
+          series: [{ //柱状图
+            type: 'column',
+            name: '次数',
+            data: []
+          }]
+        });
+
+        $(".highcharts-axis path").attr('stroke-width', 0);
+        $(".highcharts-title tspan").eq(0).css('fill', "#999999");
+        $(".highcharts-title tspan").eq(1).css('fill', "#252525");
+        $(".highcharts-title tspan").eq(2).css('fill', "#252525");
+
+        $(".highcharts-title tspan").eq(0).css('font-size', '12px');
+        $(".highcharts-title tspan").eq(1).css('font-size', '35px');
+        $(".highcharts-title tspan").eq(1).attr('dy', 40);
         
-    </body>
+        $("#chart-A").highcharts().series[1].setData([['1', 1]], true);
+        $(".highcharts-series.highcharts-series-1 path").css('fill', "#dddddd");
+        $(".highcharts-data-labels.highcharts-series-1").hide();
+        $("#chart-A").highcharts().series[0].hide();
+        $("#nodata").hide();
+
+      });
+
+    </script>
+  </head>
+
+  <body height="100%" style="zoom: 1;margin-left: 0px;margin-right: 0px;margin-top: 0px;margin-bottom: 0px;">
+    <script src="../../js/highcharts/highcharts.js"></script>
+    <div>
+      <text x="100" id="nodata" zIndex="-1" style="text-align: center; position:absolute;z-index:1;  padding-top:80%; width:100%; color:#b8b8b8; font-size:20px;">无数据</text>
+    </div>
+    <div id="chart-A" height="70% !important;"  style="min-width: 100%; min-height:100%; !important; z-index:0 " class="chart"></div>
+    <div id="container" height="30% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
+    </div>
+
+  </body>
+
 </html>

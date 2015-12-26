@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-XW-ouD">
-                                <rect key="frame" x="0.0" y="53" width="600" height="483"/>
+                                <rect key="frame" x="0.0" y="53" width="600" height="445"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
@@ -38,7 +38,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nR4-XW-ouD" secondAttribute="trailing" constant="-20" id="WSn-WZ-fRi"/>
                             <constraint firstItem="nR4-XW-ouD" firstAttribute="top" secondItem="J80-hP-PbU" secondAttribute="bottom" constant="15" id="hlN-NY-HTe"/>
                             <constraint firstItem="J80-hP-PbU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shu-PW-2p5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nR4-XW-ouD" secondAttribute="bottom" constant="38" id="zKm-S8-WQg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HVd-fs-VvL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="YRg-zF-acF"/>
                     <connections>
