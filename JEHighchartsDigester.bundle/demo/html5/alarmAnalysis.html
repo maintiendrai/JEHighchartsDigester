@@ -4,15 +4,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Highcharts Example</title>
-    <style type="text/css">
-      #container {
-        background: #ebebeb;
-      },
-      #chart-A {
-        background: #ebebeb;
-      }
-
-    </style>
     <script type="text/javascript" src="../../js/jquery-1.9.0.js"></script>
     <script type="text/javascript">
       function combinationPlotFilled(columnData, pieData, allCount, month) {
@@ -55,7 +46,7 @@
           $("#nodata").hide();
         }
 
-        $(".highcharts-title tspan").eq(1).text(allCount);
+        $(".count").text(allCount);
 
       }
 
@@ -83,9 +74,9 @@
       }
 
       function diaCenter() {
-        return ["50%", "20%"];
+        return ["50%", "50%"];
       }
-
+    
       $(function() {
 
         $("#chart-A").height($(document).height() * 65 / 100);
@@ -95,15 +86,15 @@
         $("#chart-A").highcharts({
           chart: {
             type: 'pie', // Chart type (i.e. 'bar', 'column', 'spline' etc)
-            backgroundColor: 'transparent'
-          },
-          title: {
-            text: '报警总数<br>0',
-            align: 'center',
+            backgroundColor: '#ebebeb'
+        },
+        title: {
+            text: '',
             y: mytitlePosition(),
             x: 0,
             dy: 30
-          },
+        },
+          
           colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
           xAxis: {
             // Categories for the charts
@@ -165,7 +156,7 @@
             },
             name: "占比",
             position: {
-            marginLeft: 0,
+                   marginLeft: 0,
             },
 
             borderWidth: 0,
@@ -190,7 +181,7 @@
           },
 
           chart: {
-            backgroundColor: 'transparent'
+            backgroundColor: '#ebebeb'
           },
 
           colors: ['#ff9a38', '#ffc444', '#fb8800', '#ffd427', '#ffa518', '#ea4e2f', '#d83717', '#ff6600', '#b048f2', '#f94c4d', '#14d18c'],
@@ -246,19 +237,25 @@
         });
 
         $(".highcharts-axis path").attr('stroke-width', 0);
-        $(".highcharts-title tspan").eq(0).css('fill', "#999999");
-        $(".highcharts-title tspan").eq(1).css('fill', "#252525");
-        $(".highcharts-title tspan").eq(2).css('fill', "#252525");
-
-        $(".highcharts-title tspan").eq(0).css('font-size', '12px');
-        $(".highcharts-title tspan").eq(1).css('font-size', '35px');
-        $(".highcharts-title tspan").eq(1).attr('dy', 40);
         
         $("#chart-A").highcharts().series[1].setData([['1', 1]], true);
         $(".highcharts-series.highcharts-series-1 path").css('fill', "#dddddd");
         $(".highcharts-data-labels.highcharts-series-1").hide();
         $("#chart-A").highcharts().series[0].hide();
         $("#nodata").hide();
+        
+        var textX = $("#chart-A").highcharts().plotLeft + ($("#chart-A").highcharts().plotWidth  * 0.5);
+        var textY = $("#chart-A").highcharts().plotTop  + ($("#chart-A").highcharts().plotHeight * 0.45);
+        
+        var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
+        span += '<span style="font-size: 12px; color:#999999;">报警总数</span><br>';
+        span += '<span class="count" style="font-size: 35px; color:#252525;">0</span>';
+        span += '</span>';
+        
+        $("#addText").append(span);
+        span = $('#pieChartInfoText');
+        span.css('left', textX + (span.width() * -0.5));
+        span.css('top', textY + (span.height() * -0.5));
 
       });
 
@@ -271,6 +268,7 @@
       <text x="100" id="nodata" zIndex="-1" style="text-align: center; position:absolute;z-index:1;  padding-top:80%; width:100%; color:#b8b8b8; font-size:20px;">无数据</text>
     </div>
     <div id="chart-A" height="70% !important;"  style="min-width: 100%; min-height:100%; !important; z-index:0 " class="chart"></div>
+    <div id="addText" height="70% !important;"  style="min-width: 100%; min-height:100%; !important; z-index:0 " class="chart"></div>
     <div id="container" height="30% !important; " style="min-width: 100%; min-height:100%; !important; z-index:0 ">
     </div>
 
