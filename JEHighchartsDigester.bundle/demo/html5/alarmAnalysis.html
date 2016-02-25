@@ -15,6 +15,25 @@
           series1 = [],
           series2 = [];
           
+          var minPC = 5 ,    // the minimum %age slice visible
+          total = 0;         // total should be set to the sum of the values of all your slices
+          
+          for (var slice in pieData) { //assuming slices is a standard JS 'array'
+              total = parseInt(total) + parseInt(pieData[slice][1]);
+          }
+          
+          var minValue = total / 100 * minPC; // The smallest value visible (given the current total)
+          
+          var i=0, j=0;
+          
+          dataLength = pieData.length;
+          
+          for (j = i; j < dataLength; j++) {
+              if (parseInt(pieData[j][1]) < parseInt(minValue)) {
+                  pieData[j][1] = minValue;
+              }
+          }
+          
           pieChart.series[0].setData(pieData, true);
           
         var chart = $('#container').highcharts(),
@@ -83,6 +102,7 @@
         $("#container").height($(document).height() * 35 / 100);
         $("#container").width($(document).width() * 100 / 100);
 
+        
         $("#chart-A").highcharts({
           chart: {
             type: 'pie', // Chart type (i.e. 'bar', 'column', 'spline' etc)
@@ -109,11 +129,13 @@
             },
             min: 0
           },
+                                 
           tooltip: {
             shared: true // If you have multiple series then all points in each category will show up on one tooltip
           },
           plotOptions: {
             pie: {
+              miniSize:50,
               allowPointSelect: true,
               cursor: 'pointer',
               dataLabels: {
@@ -136,9 +158,6 @@
               alpha: 45
             },
             name: "占比",
-            position: {
-              marginLeft: 0,
-            },
 
             borderWidth: 0,
             colorByPoint: true,
@@ -158,6 +177,7 @@
             position: {
                    marginLeft: 0,
             },
+                   
 
             borderWidth: 0,
             colorByPoint: true,
