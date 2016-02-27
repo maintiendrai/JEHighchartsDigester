@@ -15,27 +15,41 @@
           series1 = [],
           series2 = [];
           
-          var minPC = 5 ,    // the minimum %age slice visible
-          total = 0;         // total should be set to the sum of the values of all your slices
+          var minPC = 5 ,
+          total = 0;
           
-          for (var slice in pieData) { //assuming slices is a standard JS 'array'
+          for (var slice in pieData) {
               total = parseInt(total) + parseInt(pieData[slice][1]);
           }
           
-          var minValue = total / 100 * minPC; // The smallest value visible (given the current total)
+          var minValue = total / 100 * minPC;
           
           var i=0, j=0;
           
           dataLength = pieData.length;
           
+          dataLength = pieData.length;
+          
+          var finalData = '[';
+          
           for (j = i; j < dataLength; j++) {
+              finalData = finalData + '{"name":"' + pieData[j][0] + '" , "y":';
               if (parseInt(pieData[j][1]) < parseInt(minValue)) {
-                  pieData[j][1] = minValue;
+                  finalData = finalData + minValue + ' , "original":';
+              } else {
+                  finalData = finalData + pieData[j][1] + ' , "original":';
+              }
+              if(j==dataLength-1) {
+                  finalData = finalData + pieData[j][1] + '}';
+              } else {
+                  finalData = finalData + pieData[j][1] + '},';
               }
           }
+          finalData = finalData + ']';
+
+          pieChart.series[0].setData(JSON.parse(finalData), true);
           
-          pieChart.series[0].setData(pieData, true);
-          
+   
         var chart = $('#container').highcharts(),
           inCome = columnData,
           lenObj = inCome.length,
@@ -69,9 +83,6 @@
 
       }
 
-
-
-
       function mytitlePosition() {
         return $("#chart-A").height() * 0.3;
       }
@@ -95,6 +106,8 @@
       function diaCenter() {
         return ["50%", "50%"];
       }
+    
+   
     
       $(function() {
 
@@ -131,6 +144,9 @@
           },
                                  
           tooltip: {
+             formatter: function () {
+                 return  this.key +  ' <br/>占比:' + this.point.options.original;
+             },
             shared: true // If you have multiple series then all points in each category will show up on one tooltip
           },
           plotOptions: {
