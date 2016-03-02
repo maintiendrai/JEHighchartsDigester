@@ -15,39 +15,8 @@
           series1 = [],
           series2 = [];
           
-          var minPC = 5 ,
-          total = 0;
-          
-          for (var slice in pieData) {
-              total = parseInt(total) + parseInt(pieData[slice][1]);
-          }
-          
-          var minValue = total / 100 * minPC;
-          
-          var i=0, j=0;
-          
-          dataLength = pieData.length;
-          
-          dataLength = pieData.length;
-          
-          var finalData = '[';
-          
-          for (j = i; j < dataLength; j++) {
-              finalData = finalData + '{"name":"' + pieData[j][0] + '" , "y":';
-              if (parseInt(pieData[j][1]) < parseInt(minValue)) {
-                  finalData = finalData + minValue + ' , "original":';
-              } else {
-                  finalData = finalData + pieData[j][1] + ' , "original":';
-              }
-              if(j==dataLength-1) {
-                  finalData = finalData + pieData[j][1] + '}';
-              } else {
-                  finalData = finalData + pieData[j][1] + '},';
-              }
-          }
-          finalData = finalData + ']';
 
-          pieChart.series[0].setData(JSON.parse(finalData), true);
+          pieChart.series[0].setData(JSON.parse(pieDataPercentageFixed(pieData)), true);
           
    
         var chart = $('#container').highcharts(),
@@ -82,6 +51,39 @@
         $(".count").text(allCount);
 
       }
+    
+    function pieDataPercentageFixed(pieData) {
+        var minPC = 5 ,
+        total = 0;
+        
+        for (var slice in pieData) {
+            total = parseInt(total) + parseInt(pieData[slice][1]);
+        }
+        
+        var minValue = total / 100 * minPC;
+        
+        var i=0, j=0;
+        
+        dataLength = pieData.length;
+        
+        var finalData = '[';
+        
+        for (j = i; j < dataLength; j++) {
+            finalData = finalData + '{"name":"' + pieData[j][0] + '" , "y":';
+            if (parseInt(pieData[j][1]) < parseInt(minValue)) {
+                finalData = finalData + minValue + ' , "original":';
+            } else {
+                finalData = finalData + pieData[j][1] + ' , "original":';
+            }
+            if(j==dataLength-1) {
+                finalData = finalData + pieData[j][1] + '}';
+            } else {
+                finalData = finalData + pieData[j][1] + '},';
+            }
+        }
+        finalData = finalData + ']';
+        return finalData;
+    }
 
       function mytitlePosition() {
         return $("#chart-A").height() * 0.3;
