@@ -15,9 +15,11 @@
           series1 = [],
           series2 = [];
           
-
-          pieChart.series[0].setData(JSON.parse(pieDataPercentageFixed(pieData)), true);
-          
+          if(pieData != null) {
+              pieChart.series[0].setData(JSON.parse(pieDataPercentageFixed(pieData)), true);
+          } else {
+              pieChart.series[0].setData(pieData, true);
+          }
    
         var chart = $('#container').highcharts(),
           inCome = columnData,
